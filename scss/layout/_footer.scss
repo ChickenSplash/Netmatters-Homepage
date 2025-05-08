@@ -1,32 +1,45 @@
 footer {
-    background-color: #323544;
-    color: #fff;
+    background-color: $color-base;
+    color: $color-light-text;
     padding: 30px 0px 0px;
     position: relative;
 
-    &-row {
-        display: flex;
-        flex-wrap: wrap;
+    h4 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-bottom: 26px;
     }
 
-    &-menu {
-        flex: 100%;
-        margin-bottom: 30px;
+    a {
+        color: $color-light-text;
+        text-decoration: none;
 
-        h4 {
-            color: red
+        &:hover {
+            text-decoration: underline;
         }
+    }
 
-        @media (min-width: $break-point-small) {
-            flex: 50%;
-        }
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .footer-menu {
+            flex: 100%;
+            margin-bottom: 30px;
 
-        @media (min-width: $break-point-medium) {
-            flex: 25%;
-        }
+            @media (min-width: $break-point-small) {
+                flex: 50%;
+            }
 
-        @media (min-width: $break-point-large) {
-            margin-bottom: 40px;
+            @media (min-width: $break-point-medium) {
+                flex: 25%;
+            }
+
+            @media (min-width: $break-point-large) {
+                margin-bottom: 40px;
+            }
         }
+    }
+    .company-info {
     }
 }

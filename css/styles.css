@@ -1,3 +1,8 @@
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
 body {
   margin: 0;
 }
@@ -32,29 +37,38 @@ footer {
   padding: 30px 0px 0px;
   position: relative;
 }
-footer-row {
+footer h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 26px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .footer-row {
   display: flex;
   flex-wrap: wrap;
 }
-footer-menu {
+footer .footer-row .footer-menu {
   flex: 100%;
   margin-bottom: 30px;
 }
-footer-menu h4 {
-  color: red;
-}
 @media (min-width: 768px) {
-  footer-menu {
+  footer .footer-row .footer-menu {
     flex: 50%;
   }
 }
 @media (min-width: 992px) {
-  footer-menu {
+  footer .footer-row .footer-menu {
     flex: 25%;
   }
 }
 @media (min-width: 1260px) {
-  footer-menu {
+  footer .footer-row .footer-menu {
     margin-bottom: 40px;
   }
 }
