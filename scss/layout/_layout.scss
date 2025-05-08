@@ -21,4 +21,26 @@ body {
     @media (min-width: $break-point-large) {
         width: 1200px;
     }
+
+    &-item {
+        width:90%;
+        height: minmax(200px, auto);
+        border: 5px grey solid;
+    }
+}
+
+.hero {
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        background-image: url(../img/hero-image.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &-text {
+        color: $color-light-text;
+    }
 }

@@ -1,0 +1,12 @@
+.main-nav li {
+    display: none;
+    padding-inline: 10px;
+
+    @media (min-width: $break-point-medium) {
+        display: inline-block;
+    }
+}
+
+nav {
+    background-color: $color-base;
+}

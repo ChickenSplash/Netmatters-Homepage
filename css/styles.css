@@ -1,6 +1,7 @@
 ul {
   list-style: none;
-  padding: 0px;
+  padding-block: 10px;
+  margin: 0px;
 }
 
 body {
@@ -29,6 +30,46 @@ body {
   .container {
     width: 1200px;
   }
+}
+.container-item {
+  width: 90%;
+  height: minmax(200px, auto);
+  border: 5px grey solid;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  background-image: url(../img/hero-image.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-text {
+  color: #fff;
+}
+
+header img {
+  display: inline-block;
+}
+header a {
+  display: inline-block;
+}
+
+.main-nav li {
+  display: none;
+  padding-inline: 10px;
+}
+@media (min-width: 992px) {
+  .main-nav li {
+    display: inline-block;
+  }
+}
+
+nav {
+  background-color: #323544;
 }
 
 footer {
