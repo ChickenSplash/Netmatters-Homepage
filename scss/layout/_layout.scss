@@ -10,15 +10,15 @@ body {
     margin-inline: auto;
     padding-inline: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: $break-point-small) {
         width: 750px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $break-point-medium) {
         width: 970px;
     }
 
-    @media (min-width: 1260px) {
+    @media (min-width: $break-point-large) {
         width: 1200px;
     }
 }

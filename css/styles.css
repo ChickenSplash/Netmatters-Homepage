@@ -26,4 +26,37 @@ body {
   }
 }
 
+footer {
+  background-color: #323544;
+  color: #fff;
+  padding: 30px 0px 0px;
+  position: relative;
+}
+footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer-menu {
+  flex: 100%;
+  margin-bottom: 30px;
+}
+footer-menu h4 {
+  color: red;
+}
+@media (min-width: 768px) {
+  footer-menu {
+    flex: 50%;
+  }
+}
+@media (min-width: 992px) {
+  footer-menu {
+    flex: 25%;
+  }
+}
+@media (min-width: 1260px) {
+  footer-menu {
+    margin-bottom: 40px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

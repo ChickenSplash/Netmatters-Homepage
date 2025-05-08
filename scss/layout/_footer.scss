@@ -1,0 +1,32 @@
+footer {
+    background-color: #323544;
+    color: #fff;
+    padding: 30px 0px 0px;
+    position: relative;
+
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-menu {
+        flex: 100%;
+        margin-bottom: 30px;
+
+        h4 {
+            color: red
+        }
+
+        @media (min-width: $break-point-small) {
+            flex: 50%;
+        }
+
+        @media (min-width: $break-point-medium) {
+            flex: 25%;
+        }
+
+        @media (min-width: $break-point-large) {
+            margin-bottom: 40px;
+        }
+    }
+}
