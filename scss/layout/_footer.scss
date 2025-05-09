@@ -26,6 +26,7 @@ footer {
         .footer-menu {
             flex: 100%;
             margin-bottom: 30px;
+            padding-inline: 15px;
 
             @media (min-width: $break-point-small) {
                 flex: 50%;

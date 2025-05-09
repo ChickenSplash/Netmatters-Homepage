@@ -1,14 +1,15 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 ul {
   list-style: none;
   padding-block: 10px;
-  padding-left: 10px;
+  padding-left: 0px;
   margin: 0px;
 }
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "sans-serif";
 }
 
 * {
@@ -93,6 +94,13 @@ nav {
   }
 }
 
+#star::after {
+  font-size: 4rem;
+  content: "★★★★★";
+  color: yellow;
+  display: block;
+}
+
 footer {
   background-color: #323544;
   color: #fff;
@@ -118,6 +126,7 @@ footer .footer-row {
 footer .footer-row .footer-menu {
   flex: 100%;
   margin-bottom: 30px;
+  padding-inline: 15px;
 }
 @media (min-width: 768px) {
   footer .footer-row .footer-menu {

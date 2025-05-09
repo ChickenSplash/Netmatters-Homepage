@@ -14,3 +14,10 @@
     justify-content: space-between;
     }
 }
+
+#star::after {
+  font-size: 4rem;
+  content: "★★★★★";
+  color: yellow;
+  display: block;
+}
