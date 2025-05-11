@@ -13,6 +13,7 @@ footer {
     a {
         color: $color-light-text;
         text-decoration: none;
+        font-size: 0.8125rem;
 
         &:hover {
             text-decoration: underline;
@@ -40,5 +41,11 @@ footer {
                 margin-bottom: 40px;
             }
         }
+    }
+}
+
+@media (min-width: $break-point-large) {
+    .container {
+        display: flex;
     }
 }

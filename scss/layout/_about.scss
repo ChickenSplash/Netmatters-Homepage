@@ -1,23 +1,56 @@
 .about {
-    background-color: $color-base;
-    padding-inline:50px;
-    color: $color-light-text
+  background-color: $color-base;
+  padding-inline:50px;
+  color: $color-light-text;
+  line-height: 30px;
+
+  &-title {
+    font-size: 2.25rem;
+  }
+
+  .container {
+  padding-block: 50px;
+  }
+  
+  a {
+    color: $color-light-text;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+  }
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.row {
+  padding-inline: 15px;
+  max-width: 750px;
+}
 
-  @media (min-width: $break-point-medium) {
-    flex-direction: row;
-    justify-content: space-between;
-    }
+.quote {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3rem;
+
+  &-author {
+    color: darken($color-light-text, 30%);
+    font-size: 1.125rem;
+  }
 }
 
 #star::after {
-  font-size: 4rem;
-  content: "★★★★★";
-  color: yellow;
-  display: block;
+}
+
+
+
+@media (min-width: $break-point-medium) {
+  .about .container {
+    display: flex;
+  }
+  .row {
+    width: 50%
+  }
+}
+
+@media (min-width: $break-point-large) {
 }
