@@ -1,6 +1,5 @@
 .about {
   background-color: $color-base;
-  padding-inline:50px;
   color: $color-light-text;
   line-height: 30px;
 
@@ -9,7 +8,11 @@
   }
 
   .container {
-  padding-block: 50px;
+    padding-block: 50px;
+
+    @media (min-width: $break-point-medium) {
+      display: flex;
+    }
   }
   
   a {
@@ -25,6 +28,10 @@
 .row {
   padding-inline: 15px;
   max-width: 750px;
+
+  @media (min-width: $break-point-medium) {
+    width: 50%;
+  }
 }
 
 .quote {
@@ -35,20 +42,6 @@
   &-author {
     color: darken($color-light-text, 30%);
     font-size: 1.125rem;
-  }
-}
-
-#star::after {
-}
-
-
-
-@media (min-width: $break-point-medium) {
-  .about .container {
-    display: flex;
-  }
-  .row {
-    width: 50%
   }
 }
 

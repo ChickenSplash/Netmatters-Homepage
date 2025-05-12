@@ -40,20 +40,6 @@ body {
   border: 5px grey solid;
 }
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 550px;
-  background-image: url(../img/hero-image.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.hero-text {
-  color: #fff;
-}
-
 header img {
   display: inline-block;
 }
@@ -75,9 +61,46 @@ nav {
   background-color: #323544;
 }
 
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  background-image: url(../img/hero-image.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero-image > * {
+  position: relative;
+  z-index: 1;
+}
+.hero-text {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .hero-text {
+    text-align: left;
+  }
+}
+.hero-text p {
+  font-size: 1.5rem;
+}
+
 .about {
   background-color: #323544;
-  padding-inline: 50px;
   color: #fff;
   line-height: 30px;
 }
@@ -86,6 +109,11 @@ nav {
 }
 .about .container {
   padding-block: 50px;
+}
+@media (min-width: 992px) {
+  .about .container {
+    display: flex;
+  }
 }
 .about a {
   color: #fff;
@@ -99,6 +127,11 @@ nav {
   padding-inline: 15px;
   max-width: 750px;
 }
+@media (min-width: 992px) {
+  .row {
+    width: 50%;
+  }
+}
 
 .quote {
   font-style: italic;
@@ -110,17 +143,8 @@ nav {
   font-size: 1.125rem;
 }
 
-@media (min-width: 992px) {
-  .about .container {
-    display: flex;
-  }
-  .row {
-    width: 50%;
-  }
-}
 footer {
   background-color: #323544;
-  color: #fff;
   padding: 30px 0px 0px;
   position: relative;
 }
@@ -140,6 +164,7 @@ footer a:hover {
 footer .footer-row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 footer .footer-row .footer-menu {
   flex: 100%;
@@ -160,6 +185,26 @@ footer .footer-row .footer-menu {
   footer .footer-row .footer-menu {
     margin-bottom: 40px;
   }
+}
+
+.footer-bottom {
+  background-color: #212330;
+  font-size: 0.8125rem;
+}
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+footer, .footer-bottom {
+  color: #fff;
+}
+
+#footer-logo {
+  width: 320px;
 }
 
 @media (min-width: 1260px) {
