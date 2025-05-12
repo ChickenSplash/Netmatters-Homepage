@@ -10,7 +10,7 @@ body {
 
 .container {
     margin-inline: auto;
-    padding-inline: auto;
+    padding-inline: 15px;
 
     @media (min-width: $break-point-small) {
         width: 750px;
@@ -22,11 +22,5 @@ body {
 
     @media (min-width: $break-point-large) {
         width: 1200px;
-    }
-
-    &-item {
-        width:90%;
-        height: minmax(200px, auto);
-        border: 5px grey solid;
     }
 }

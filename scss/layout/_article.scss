@@ -1,0 +1,63 @@
+// Layout of whole news section
+
+.news {
+
+    &-header {
+        display: flex;
+        align-items: center;
+
+        a {
+            display: none;
+
+            @media (min-width: $break-point-small) {
+                display: inline-block;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &-article {
+        padding-top: 30px;
+    }
+
+    &-footer {
+        a {
+            display: block;
+            width: max-content;
+            margin: auto;
+
+            @media (min-width: $break-point-small) {
+                display: none;
+            }
+        }
+    }
+}
+
+// Layout of individual articles
+
+.news {
+    &-details {
+        border: grey solid 2px;
+        border-top: none;
+        padding: 30px;
+    }
+
+    &-thumbnail {
+        display: block;
+        width: 100%;
+    }
+    
+    &-author p {
+      margin: 0px;  
+    }
+}
+
+.posted-by {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+
+    &--logo-img {
+        padding-right: 20px;
+    }
+}

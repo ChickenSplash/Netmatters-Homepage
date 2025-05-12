@@ -26,9 +26,6 @@
 }
 
 .row {
-  padding-inline: 15px;
-  max-width: 750px;
-
   @media (min-width: $break-point-medium) {
     width: 50%;
   }

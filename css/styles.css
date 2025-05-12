@@ -17,7 +17,7 @@ body {
 
 .container {
   margin-inline: auto;
-  padding-inline: auto;
+  padding-inline: 15px;
 }
 @media (min-width: 768px) {
   .container {
@@ -33,11 +33,6 @@ body {
   .container {
     width: 1200px;
   }
-}
-.container-item {
-  width: 90%;
-  height: minmax(200px, auto);
-  border: 5px grey solid;
 }
 
 header img {
@@ -140,10 +135,6 @@ nav {
   text-decoration: underline;
 }
 
-.row {
-  padding-inline: 15px;
-  max-width: 750px;
-}
 @media (min-width: 992px) {
   .row {
     width: 50%;
@@ -158,6 +149,55 @@ nav {
 .quote-author {
   color: rgb(178.5, 178.5, 178.5);
   font-size: 1.125rem;
+}
+
+.news-header {
+  display: flex;
+  align-items: center;
+}
+.news-header a {
+  display: none;
+}
+@media (min-width: 768px) {
+  .news-header a {
+    display: inline-block;
+    margin-left: auto;
+  }
+}
+.news-article {
+  padding-top: 30px;
+}
+.news-footer a {
+  display: block;
+  width: max-content;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .news-footer a {
+    display: none;
+  }
+}
+
+.news-details {
+  border: grey solid 2px;
+  border-top: none;
+  padding: 30px;
+}
+.news-thumbnail {
+  display: block;
+  width: 100%;
+}
+.news-author p {
+  margin: 0px;
+}
+
+.posted-by {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+.posted-by--logo-img {
+  padding-right: 20px;
 }
 
 footer {
@@ -186,7 +226,6 @@ footer .footer-row {
 footer .footer-row .footer-menu {
   flex: 100%;
   margin-bottom: 30px;
-  padding-inline: 15px;
 }
 @media (min-width: 768px) {
   footer .footer-row .footer-menu {
