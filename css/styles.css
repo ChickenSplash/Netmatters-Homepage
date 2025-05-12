@@ -99,6 +99,23 @@ nav {
   font-size: 1.5rem;
 }
 
+.slider-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.partner-logo {
+  max-height: 100%;
+  margin-inline: 50px;
+  filter: grayscale(100%);
+}
+.partner-logo:hover {
+  filter: grayscale(0%);
+}
+
 .about {
   background-color: #323544;
   color: #fff;
@@ -202,16 +219,16 @@ footer .footer-row .footer-menu {
 footer, .footer-bottom {
   color: #fff;
 }
+@media (min-width: 1260px) {
+  footer .container, .footer-bottom .container {
+    display: flex;
+  }
+}
 
 #footer-logo {
   width: 320px;
 }
 
-@media (min-width: 1260px) {
-  .container {
-    display: flex;
-  }
-}
 .btn {
   background-color: #4e9af1;
   color: white;

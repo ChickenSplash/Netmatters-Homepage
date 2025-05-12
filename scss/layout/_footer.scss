@@ -60,14 +60,14 @@ footer {
 
 footer, .footer-bottom {
     color: $color-light-text;
+
+    .container {
+        @media (min-width: $break-point-large) {
+            display: flex;
+        }
+    }   
 }
 
 #footer-logo {
     width: 320px;
-}
-
-@media (min-width: $break-point-large) {
-    .container {
-        display: flex;
-    }
 }
