@@ -81,16 +81,11 @@
   content: "\eaca";
 }
 
-ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-
 body {
   margin: 0;
   font-family: "Poppins", "sans-serif";
   letter-spacing: 0.4px;
+  color: #333645;
 }
 
 * {
@@ -116,11 +111,43 @@ body {
   }
 }
 
-header img {
+header .container {
+  display: flex;
+  align-items: center;
+  min-height: 110px;
+}
+header .container img {
   display: inline-block;
 }
-header a {
-  display: inline-block;
+header .container .btn-support {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #4183d7;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+header .container .btn-support:hover {
+  background-color: rgb(44.2608695652, 117.2913043478, 210.2391304348);
+}
+header .container .btn-contact {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #999aa2;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+header .container .btn-contact:hover {
+  background-color: rgb(139.6615384615, 140.7923076923, 149.8384615385);
 }
 
 .main-nav li {
@@ -163,12 +190,13 @@ nav {
 }
 .hero-text {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 @media (min-width: 992px) {
   .hero-text {
     text-align: left;
+    font-size: 2.5rem;
   }
 }
 .hero-text p {
@@ -178,15 +206,17 @@ nav {
 .btn-banner {
   display: inline-flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 10px 25px;
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
   background-color: #926fb1;
   line-height: 30px;
-  margin: 10px 10px 0px 0px;
   text-transform: uppercase;
+}
+.btn-banner:hover {
+  background-color: rgb(133.4797297297, 94.4594594595, 168.0405405405);
 }
 
 .slider-row {
@@ -195,6 +225,7 @@ nav {
   grid-auto-columns: 1fr;
   align-items: center;
   overflow-x: hidden;
+  padding-block: 50px;
 }
 
 .partner-logo {
@@ -257,15 +288,15 @@ nav {
 .btn-about {
   display: inline-flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 10px 25px;
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
   background-color: #272936;
   line-height: 30px;
-  margin: 10px 10px 0px 0px;
   text-transform: uppercase;
+  margin: 10px 10px 0px 0px;
 }
 .btn-about:hover {
   background-color: rgb(28.3064516129, 29.7580645161, 39.1935483871);
@@ -274,15 +305,15 @@ nav {
 .btn-google-reviews {
   display: inline-flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 10px 25px;
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
   background-color: #4387f6;
   line-height: 30px;
-  margin: 10px 10px 0px 0px;
   text-transform: uppercase;
+  margin: 10px 10px 0px 0px;
 }
 .btn-google-reviews:hover {
   background-color: rgb(42.6649746193, 119.4670050761, 244.8350253807);
@@ -291,15 +322,15 @@ nav {
 .btn-trustpilot-reviews {
   display: inline-flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 10px 25px;
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
   background-color: #00b67b;
   line-height: 30px;
-  margin: 10px 10px 0px 0px;
   text-transform: uppercase;
+  margin: 10px 10px 0px 0px;
 }
 .btn-trustpilot-reviews:hover {
   background-color: rgb(0, 156.5, 105.7664835165);
@@ -309,8 +340,17 @@ nav {
   display: flex;
   align-items: center;
 }
+.news-header h2 {
+  font-size: 2rem;
+}
 .news-header a {
   display: none;
+  color: #333645;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.news-header a:hover {
+  text-decoration: underline;
 }
 @media (min-width: 768px) {
   .news-header a {
@@ -327,11 +367,51 @@ nav {
   }
 }
 .news-article {
-  padding-top: 30px;
-  padding-inline: 15px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+.news-article .btn-news-yellow {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #f7b322;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.news-article .btn-news-red {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #ce4125;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.news-article .btn-news-blue {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #4183d7;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.news-spacing {
+  padding: 30px 15px 0px;
+}
+@media (min-width: 768px) {
+  .news-spacing {
+    flex: 1;
+  }
 }
 @media (min-width: 768px) and (max-width: 1260px) {
-  .news-article-hide {
+  .news-spacing-hide {
     display: none;
   }
 }
@@ -339,6 +419,13 @@ nav {
   display: block;
   width: max-content;
   margin: auto;
+  color: #333645;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
+.news-footer a:hover {
+  text-decoration: underline;
 }
 @media (min-width: 768px) {
   .news-footer a {
@@ -353,6 +440,16 @@ nav {
   border-bottom-left-radius: 4px;
   padding: 30px;
 }
+.news-details h3, .news-details p {
+  font-size: 1rem;
+}
+.news-details .text-small {
+  font-size: 0.8125rem;
+  color: rgb(105.1875, 111.375, 142.3125);
+}
+.news-details hr {
+  margin-block: 30px;
+}
 .news-thumbnail {
   display: block;
   width: 100%;
@@ -364,7 +461,6 @@ nav {
 .posted-by {
   display: flex;
   align-items: center;
-  padding-top: 20px;
 }
 .posted-by--logo-img {
   padding-right: 20px;
@@ -412,6 +508,11 @@ footer .footer-row .footer-menu {
     margin-bottom: 40px;
     width: 200px;
   }
+}
+footer ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .footer-bottom {

@@ -51,22 +51,26 @@
 }
 
 @include btn($color-base-dark, "about") {
+  margin: 10px 10px 0px 0px;
+  
   &:hover {
     background-color: darken($color-base-dark, 5%);
   }
 }
 
 @include btn(#4387f6, "google-reviews") {
+  margin: 10px 10px 0px 0px;
+
   &:hover {
     background-color: darken(#4387f6, 5%);
   }
 }
 
 @include btn(#00b67b, "trustpilot-reviews") {
+  margin: 10px 10px 0px 0px;
+
   &:hover {
     background-color: darken(#00b67b, 5%);
   }
 }
-
-// Fix button alignment under "What Our Clients Think"
 

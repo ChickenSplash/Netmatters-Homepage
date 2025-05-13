@@ -1,4 +1,4 @@
-// Layout of whole news section
+// Layout of the whole news section
 
 .news {
 
@@ -6,8 +6,14 @@
         display: flex;
         align-items: center;
 
+        h2 {
+            font-size: 2rem;
+        }
+
         a {
             display: none;
+
+            @include view-all();
 
             @media (min-width: $break-point-small) {
                 display: inline-block;
@@ -25,8 +31,19 @@
     }
 
     &-article {
-        padding-top: 30px;
-        padding-inline: 15px;
+        box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+
+        @include read-more-btn(#f7b322, "news-yellow");
+        @include read-more-btn(#ce4125, "news-red");
+        @include read-more-btn(#4183d7, "news-blue");
+    }
+
+    &-spacing {
+        padding: 30px 15px 0px;
+
+        @media (min-width: $break-point-small) {
+            flex: 1;
+        }
 
         &-hide {
             @media (min-width: $break-point-small) and (max-width: $break-point-large) {
@@ -41,6 +58,8 @@
             width: max-content;
             margin: auto;
 
+            @include view-all(50px);
+
             @media (min-width: $break-point-small) {
                 display: none;
             }
@@ -48,7 +67,7 @@
     }
 }
 
-// Layout of individual articles
+// Layout of the individual article items
 
 .news {
     &-details {
@@ -57,6 +76,19 @@
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
         padding: 30px;
+
+        h3, p {
+            font-size: 1rem;
+        }
+
+        .text-small {
+            font-size: 0.8125rem;
+            color: lighten($color-dark-text, 25%);
+        }
+
+        hr {
+            margin-block: 30px;
+        }
     }
 
     &-thumbnail {
@@ -72,7 +104,6 @@
 .posted-by {
     display: flex;
     align-items: center;
-    padding-top: 20px;
 
     &--logo-img {
         padding-right: 20px;

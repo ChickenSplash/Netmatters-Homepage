@@ -1,0 +1,45 @@
+// Buttons styling
+
+@mixin btn($color, $type) {
+  .btn-#{$type} {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 10px 25px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: $color;
+    line-height: 30px;
+    text-transform: uppercase;
+    @content;
+  }  
+}
+
+@mixin read-more-btn($color, $type) {
+  .btn-#{$type} {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 5px 15px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: $color;
+    line-height: 35px;
+    text-transform: uppercase;
+    @content;
+  }  
+}
+
+// "View All" link styling
+
+@mixin view-all($margin-top: null) {
+  color: $color-dark-text;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-top: $margin-top;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

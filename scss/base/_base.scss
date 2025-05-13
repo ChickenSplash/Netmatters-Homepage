@@ -1,5 +1,26 @@
-ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
+body {
+    margin: 0;
+    font-family: "Poppins", "sans-serif";
+    letter-spacing: 0.4px;
+    color: $color-dark-text;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin-inline: auto;
+
+    @media (min-width: $break-point-small) {
+        width: 750px;
+    }
+
+    @media (min-width: $break-point-medium) {
+        width: 970px;
+    }
+
+    @media (min-width: $break-point-large) {
+        width: 1200px;
+    }
 }
