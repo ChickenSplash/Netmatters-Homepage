@@ -14,18 +14,21 @@
       display: flex;
     }
   }
-  
-  a {
-    color: $color-light-text;
-    text-decoration: none;
+  p {
+    a {
+      color: $color-light-text;
+      text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
+      &:hover {
+          text-decoration: underline;
+      }
     }
   }
 }
 
 .row {
+  padding-inline: 15px;
+  
   @media (min-width: $break-point-medium) {
     width: 50%;
   }
@@ -41,3 +44,29 @@
     font-size: 1.125rem;
   }
 }
+
+.icon-star {
+  color: orange;
+  font-size: 3.125rem;
+}
+
+@include btn($color-base-dark, "about") {
+  &:hover {
+    background-color: darken($color-base-dark, 5%);
+  }
+}
+
+@include btn(#4387f6, "google-reviews") {
+  &:hover {
+    background-color: darken(#4387f6, 5%);
+  }
+}
+
+@include btn(#00b67b, "trustpilot-reviews") {
+  &:hover {
+    background-color: darken(#00b67b, 5%);
+  }
+}
+
+// Fix button alignment under "What Our Clients Think"
+

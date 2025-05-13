@@ -1,20 +1,17 @@
-.btn {
-  background-color: #4e9af1;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+@mixin btn($color, $type) {
+  .btn-#{$type} {
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px 25px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: $color;
+    line-height: 30px;
+    margin: 10px 10px 0px 0px;
+    text-transform: uppercase;
+    @content;
+  }  
 }
 
-.btn:hover {
-  background-color: #3b82d6;
-  transform: scale(1.05);
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
