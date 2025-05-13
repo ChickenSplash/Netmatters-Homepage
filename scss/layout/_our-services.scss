@@ -1,0 +1,32 @@
+.services {
+    &-item {
+        border: #ccc solid 1px;
+    }
+
+    a {
+        padding-inline: 15px;
+    }
+}
+
+.services {
+    &-header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 2.75rem;
+        }
+        
+        a {
+            display: none;
+
+            @include view-all();
+
+            @media (min-width: $break-point-small) {
+                display: inline-block;
+                margin-left: auto;
+                font-size: 2.25rem;
+            }
+        }
+    }
+}
