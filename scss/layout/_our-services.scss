@@ -1,12 +1,30 @@
+// Layout of service items
+
 .services {
     &-item {
         border: #ccc solid 1px;
+
+        a {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+            text-decoration: none;
+            color: $color-dark-text;
+        }
     }
 
-    a {
-        padding-inline: 15px;
+    &-btn {
+        @include read-more-btn(map-get($theme, yellow), "yellow");
+        @include read-more-btn(map-get($theme, red), "red");
+        @include read-more-btn(map-get($theme, blue), "blue");
+        @include read-more-btn(map-get($theme, green), "green");
+        @include read-more-btn(map-get($theme, purple), "purple");
+        @include read-more-btn(map-get($theme, crimson), "crimson");
     }
 }
+
+// Layout of service section
 
 .services {
     &-header {
@@ -19,13 +37,25 @@
         
         a {
             display: none;
-
-            @include view-all();
+            @extend %view-more-link;
 
             @media (min-width: $break-point-small) {
-                display: inline-block;
+                display: block;
                 margin-left: auto;
                 font-size: 2.25rem;
+            }
+        }
+    }
+
+    &-footer {
+        a {
+            display: block;
+            width: max-content;
+            margin: 50px auto 0;
+            @extend %view-more-link;
+
+            @media (min-width: $break-point-small) {
+                display: none;
             }
         }
     }

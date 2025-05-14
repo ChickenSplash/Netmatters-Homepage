@@ -7,13 +7,13 @@ header .container {
         display: inline-block;
     }
     
-    @include btn(#4183d7, "support") {
+    @include about-btn(#4183d7, "support") {
         &:hover {
             background-color: darken(#4183d7, 5%);
         }
     }
 
-    @include btn(#999aa2, "contact") {
+    @include about-btn(#999aa2, "contact") {
         &:hover {
             background-color: darken(#999aa2, 5%);
         }

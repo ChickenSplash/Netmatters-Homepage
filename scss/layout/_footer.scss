@@ -9,7 +9,7 @@ footer {
         margin-bottom: 26px;
     }
 
-    a {
+    li a {
         color: $color-light-text;
         text-decoration: none;
         font-size: 0.8125rem;
@@ -78,3 +78,22 @@ footer, .footer-bottom {
 #footer-logo {
     width: 320px;
 }
+
+// Footer Social Buttons
+
+.social-logo {
+    background-color: $color-base-dark;
+    color: $color-light-text;
+    font-size: 26px;
+    padding: 12px 22px 16px;
+    margin: 0 10px 10px 0;
+}
+
+.footer-social-logos a {
+    text-decoration: none;
+}
+
+@include social-button("facebook", #3b5998);
+@include social-button("linkedin2", #0077b5);
+@include social-button("x", #00aced);
+@include social-button("instagram", #d93175);

@@ -15,6 +15,15 @@ $color-base-dark: #272936;
 $color-light-text: #fff;
 $color-dark-text: #333645;
 
+$theme: (
+    yellow: #F7B322,
+    blue: #4183D7,
+    green: #2ECC71,
+    red: #D64541,
+    purple: #926FB1,
+    crimson: #F62459,
+);
+
 // Fonts
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins&display=swap');

@@ -1,0 +1,66 @@
+// BUTTONS
+
+// Read More Button
+
+// Revisit this at a later time so I could perhaps only need $type and then it fetches a stored color in a variable
+// (I am very proud of this)
+
+%read-more-btn {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 5px 15px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+@mixin read-more-btn($color, $type) {
+  &-#{$type} {
+    @extend %read-more-btn;
+    background-color: $color;
+    @content;
+  }  
+}
+
+// About Section Buttons
+
+%about-btn {
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 10px 25px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+@mixin about-btn($color, $type) {
+  .btn-#{$type} {
+    @extend %about-btn;
+    background-color: $color;
+    @content;
+  }  
+}
+
+// Social Buttons
+
+@mixin social-button($social, $color) {
+    .icon-#{$social}:hover {
+        background-color: $color;
+    }
+}
+
+// View More Link (in services and article sections)
+
+%view-more-link {
+  color: $color-dark-text;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

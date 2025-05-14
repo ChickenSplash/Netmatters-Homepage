@@ -12,11 +12,10 @@
 
         a {
             display: none;
-
-            @include view-all();
-
+            @extend %view-more-link;
+            
             @media (min-width: $break-point-small) {
-                display: inline-block;
+                display: block;
                 margin-left: auto;
             }
         }
@@ -32,10 +31,6 @@
 
     &-article {
         box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-
-        @include read-more-btn(#f7b322, "news-yellow");
-        @include read-more-btn(#ce4125, "news-red");
-        @include read-more-btn(#4183d7, "news-blue");
     }
 
     &-spacing {
@@ -61,9 +56,8 @@
         a {
             display: block;
             width: max-content;
-            margin: auto;
-
-            @include view-all(50px);
+            margin: 50px auto 0;
+            @extend %view-more-link;
 
             @media (min-width: $break-point-small) {
                 display: none;
@@ -103,6 +97,12 @@
     
     &-author p {
       margin: 0px;  
+    }
+
+    &-btn {
+        @include read-more-btn(map-get($theme, yellow), "yellow");
+        @include read-more-btn(map-get($theme, red), "red");
+        @include read-more-btn(map-get($theme, blue), "blue");
     }
 }
 

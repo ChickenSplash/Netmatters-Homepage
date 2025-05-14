@@ -41,7 +41,7 @@
     }
 }
 
-@include btn(#926fb1, "banner") {
+@include about-btn(#926fb1, "banner") {
     &:hover {
     background-color: darken(#926fb1, 5%);
   }
