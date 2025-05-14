@@ -5,6 +5,7 @@ header .container {
     
     img {
         display: inline-block;
+        max-width: 100%;
     }
     
     @include about-btn(#4183d7, "support") {
@@ -20,3 +21,6 @@ header .container {
     }
 }
 
+.search-items {
+    margin-left: auto;
+}
