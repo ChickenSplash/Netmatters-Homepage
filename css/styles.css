@@ -278,7 +278,7 @@ body {
   }
 }
 
-ul {
+ul, li {
   list-style: none;
   padding: 0px;
   margin: 0px;
@@ -323,15 +323,15 @@ nav {
   color: #fff;
 }
 
-.nav-main {
+.nav-bar {
   display: none;
 }
 @media (min-width: 992px) {
-  .nav-main {
+  .nav-bar {
     display: flex;
   }
 }
-.nav-main .nav-category {
+.nav-bar .nav-category {
   flex: 1;
 }
 .nav-button {
@@ -373,6 +373,7 @@ nav {
 }
 
 .nav-dropdown {
+  display: none;
   position: absolute;
   z-index: 10;
   width: 100vw;
@@ -392,6 +393,9 @@ nav {
 }
 .nav-dropdown ul li {
   padding: 10px 15px 10px 0px;
+}
+.nav-category:hover .nav-dropdown {
+  display: block;
 }
 
 .hero-image {
@@ -451,9 +455,6 @@ nav {
   border: #ccc solid 1px;
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-}
-.services-item a:hover .services-btn {
-  background-color: #ccc;
 }
 .services-item h3 {
   font-size: 1.25rem;

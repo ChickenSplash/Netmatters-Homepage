@@ -8,7 +8,7 @@ nav {
 // Nav Bar
 
 .nav {
-    &-main {
+    &-bar {
         display: none;
 
         @media (min-width: $break-point-medium) {
@@ -47,7 +47,7 @@ nav {
 
 .nav {
     &-dropdown {
-        // display: none;
+        display: none;
         position: absolute;
         z-index: 10;
         width: 100vw;
@@ -71,5 +71,9 @@ nav {
                 padding: 10px 15px 10px 0px;
             }
         }
+    }
+
+    &-category:hover .nav-dropdown {
+        display: block;
     }
 }
