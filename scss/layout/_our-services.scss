@@ -29,6 +29,18 @@
         p{
             font-size: 0.8125rem;
         }
+
+        [class^="icon-"] {
+            font-size: 32px;
+            color: $color-light-text;
+            background-color: red;
+            border-radius: 50%;
+            height: 65px;
+            width: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &-btn {

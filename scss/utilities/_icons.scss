@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?8qci41');
-  src:  url('../fonts/icomoon.eot?8qci41#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?8qci41') format('truetype'),
-    url('../fonts/icomoon.woff?8qci41') format('woff'),
-    url('../fonts/icomoon.svg?8qci41#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?1qjut1');
+  src:  url('../fonts/icomoon.eot?1qjut1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1qjut1') format('truetype'),
+    url('../fonts/icomoon.woff?1qjut1') format('woff'),
+    url('../fonts/icomoon.svg?1qjut1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -34,6 +34,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-lock:before {
+  content: "\e908";
+}
 .icon-paperplane:before {
   content: "\e903";
 }
@@ -46,8 +49,14 @@
 .icon-email:before {
   content: "\e903";
 }
-.icon-x:before {
-  content: "\e902";
+.icon-trending-up:before {
+  content: "\e909";
+}
+.icon-science:before {
+  content: "\e90a";
+}
+.icon-security:before {
+  content: "\e907";
 }
 .icon-mouse:before {
   content: "\e904";
@@ -55,14 +64,107 @@
 .icon-phone_in_talk:before {
   content: "\e900";
 }
+.icon-envelope:before {
+  content: "\e90b";
+}
+.icon-education:before {
+  content: "\e905";
+}
+.icon-bar-graph:before {
+  content: "\e906";
+}
+.icon-x:before {
+  content: "\e902";
+}
+.icon-group:before {
+  content: "\e90c";
+}
+.icon-users:before {
+  content: "\e90c";
+}
+.icon-handshake-o:before {
+  content: "\e90d";
+}
 .icon-star:before {
   content: "\e901";
+}
+.icon-pencil:before {
+  content: "\e90e";
+}
+.icon-headphones:before {
+  content: "\e910";
+}
+.icon-paste:before {
+  content: "\e92d";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
+.icon-ticket:before {
+  content: "\e939";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-coin-pound:before {
+  content: "\e93d";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-laptop:before {
+  content: "\e957";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-database:before {
+  content: "\e964";
 }
 .icon-search:before {
   content: "\e986";
 }
+.icon-cogs:before {
+  content: "\e995";
+}
+.icon-meter:before {
+  content: "\e9a6";
+}
+.icon-briefcase:before {
+  content: "\e9ae";
+}
+.icon-cloud:before {
+  content: "\e9c1";
+}
+.icon-cloud-download:before {
+  content: "\e9c2";
+}
+.icon-download3:before {
+  content: "\e9c7";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+.icon-shuffle:before {
+  content: "\ea30";
+}
 .icon-arrow-right2:before {
   content: "\ea3c";
+}
+.icon-tab:before {
+  content: "\ea45";
+}
+.icon-embed2:before {
+  content: "\ea80";
 }
 .icon-facebook:before {
   content: "\ea90";

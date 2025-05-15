@@ -1,7 +1,6 @@
 // BUTTONS
 
 // Read More Button
-// (I am very proud of this)
 
 %read-more-btn {
     display: inline-block;
@@ -19,6 +18,16 @@
     &-#{$name} {
       @extend %read-more-btn;
       background-color: $color;
+    }
+  }  
+}
+
+// Icon Colour Themes
+
+@mixin icon-colors($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      color: $color;
     }
   }  
 }

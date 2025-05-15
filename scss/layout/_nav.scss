@@ -9,13 +9,45 @@ nav {
         @media (min-width: $break-point-medium) {
         display: flex;
         }
+
+        .nav-category {
+            flex: 1;
+        }
     }
 
-    &-category {
+    &-button {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
         align-items: center;
-        color: #fff
+        padding-block: 18px;
+        color: #fff;
+
+        .small {
+            font-size: 0.625rem;
+            margin-bottom: -5px;
+        }
+
+        span[class^="icon-"] {
+            font-size: 23px;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.font-color {
+    @include icon-colors($theme);
+}
+
+.nav-dropdown {
+    // display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    left: 0;
+    background-color: map-get($theme, gray);
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
