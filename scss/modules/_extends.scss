@@ -2,17 +2,6 @@
 
 // Read More Button
 
-%read-more-btn {
-    display: inline-block;
-    font-size: 1rem;
-    padding: 5px 15px;
-    color: $color-light-text;
-    text-decoration: none;
-    border-radius: 3px;
-    line-height: 35px;
-    text-transform: uppercase;
-}
-
 @mixin service-tile-theme($theme) {
   @each $name, $color in $theme {
     &-#{$name} {

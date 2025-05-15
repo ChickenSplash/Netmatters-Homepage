@@ -217,17 +217,6 @@
   content: "\eaca";
 }
 
-.read-more-btn {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 5px 15px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 3px;
-  line-height: 35px;
-  text-transform: uppercase;
-}
-
 .btn-trustpilot-reviews, .btn-google-reviews, .btn-about, .btn-banner, header .container .btn-contact, header .container .btn-support {
   text-transform: uppercase;
   display: inline-flex;
@@ -246,6 +235,17 @@
 }
 .news-footer a:hover, .news-header a:hover, .services-footer a:hover, .services-header a:hover {
   text-decoration: underline;
+}
+
+.read-more-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  line-height: 35px;
+  text-transform: uppercase;
 }
 
 body {
