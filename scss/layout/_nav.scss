@@ -1,6 +1,11 @@
+// Base styles for whole nave section
+
 nav {
     background-color: $color-base;
+    color: $color-light-text
 }
+
+// Nav Bar
 
 .nav {
     &-main {
@@ -38,16 +43,33 @@ nav {
     @include icon-colors($theme);
 }
 
-.nav-dropdown {
-    // display: none;
-    position: absolute;
-    z-index: 10;
-    width: 100vw;
-    left: 0;
-    background-color: map-get($theme, gray);
+// Nav Dropdowns
 
-    ul {
-        display: flex;
-        flex-wrap: wrap;
+.nav {
+    &-dropdown {
+        // display: none;
+        position: absolute;
+        z-index: 10;
+        width: 100vw;
+        left: 0;
+        background-color: map-get($theme, gray);
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .container {
+            padding-block: 50px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 1.2rem;
+
+            li {
+                padding: 10px 15px 10px 0px;
+            }
+        }
     }
 }

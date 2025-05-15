@@ -24,3 +24,18 @@ body {
         width: 1200px;
     }
 }
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.link {
+    color: $color-light-text;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
