@@ -13,13 +13,35 @@
     text-transform: uppercase;
 }
 
-@mixin read-more-btn($theme) {
+@mixin service-tile-theme($theme) {
   @each $name, $color in $theme {
     &-#{$name} {
-      @extend %read-more-btn;
-      background-color: $color;
+      .theme {
+        background-color: $color;
+      }
+      &:hover {
+        .theme {
+          background-color: #fff;
+          color: $color;
+        }
+        background-color: $color;
+        color: $color-light-text
+      }
     }
   }  
+}
+
+@mixin news-tile-theme($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      .theme {
+        background-color: $color;
+      }
+      h3 {
+        color: $color;
+      }
+    }
+  }
 }
 
 // Icon Colour Themes

@@ -30,6 +30,7 @@
     }
 
     &-article {
+        display: block;
         box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
         position: relative;
     }
@@ -70,6 +71,12 @@
 // Layout of the individual article items
 
 .news {
+    &-spacing {
+        .theme {
+            @include news-tile-theme($theme);
+        }
+    }
+
     &-details {
         border: #ccc solid 1px;
         border-top: none;
@@ -98,10 +105,6 @@
     
     &-author p {
       margin: 0px;  
-    }
-
-    &-btn {
-        @include read-more-btn($theme);
     }
 
     &-link {
