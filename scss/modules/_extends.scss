@@ -1,44 +1,82 @@
 // BUTTONS
 
-// Read More Button
+// Services Tiles Themes
 
 @mixin service-tile-theme($theme) {
   @each $name, $color in $theme {
     &-#{$name} {
-      .theme {
-        background-color: $color;
-      }
-      &:hover {
+      @if $name == "yellow" {
         .theme {
-          background-color: #fff;
-          color: $color;
+          background-color: map-get($theme, "gray");
         }
-        background-color: $color;
-        color: $color-light-text
+        .theme-btn {
+          background-color: $color;
+        }
+        &:hover {
+          .theme, .theme-btn {
+            background-color: #fff;
+            color: map-get($theme, "gray");
+          }
+          background-color: map-get($theme, "gray");
+          color: $color-light-text;
+        }
       }
-    }
-  }  
-}
-
-@mixin news-tile-theme($theme) {
-  @each $name, $color in $theme {
-    &-#{$name} {
-      .theme {
-        background-color: $color;
-      }
-      h3 {
-        color: $color;
+      @else {
+        .theme, .theme-btn {
+          background-color: $color;
+        }
+        &:hover {
+          .theme, .theme-btn {
+            background-color: #fff;
+            color: $color;
+          }
+          background-color: $color;
+          color: $color-light-text;
+        }
       }
     }
   }
 }
 
-// Icon Colour Themes
-
-@mixin icon-colors($theme) {
+// News Tiles Themes
+ 
+@mixin news-tile-theme($theme) {
   @each $name, $color in $theme {
     &-#{$name} {
-      color: $color;
+      @if $name == "yellow" {
+        .theme {
+          background-color: map-get($theme, "gray");
+        }
+        .theme-btn {
+          background-color: $color;
+        }
+        h3 {
+          color: map-get($theme, "gray");
+        }
+      }
+      @else {
+        .theme, .theme-btn {
+          background-color: $color;
+        }
+        h3 {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+// Nav Bar Colour Themes
+
+@mixin nav-bar-theme($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      .theme {
+        color: $color;
+      }
+      .nav-dropdown {
+        background-color: darken($color, 10%);
+      }
     }
   }  
 }

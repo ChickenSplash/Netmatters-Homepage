@@ -355,35 +355,12 @@ nav {
   padding-bottom: 8px;
 }
 
-.font-color-gray {
-  color: #67809f;
-}
-.font-color-yellow {
-  color: #F7B322;
-}
-.font-color-blue {
-  color: #4183D7;
-}
-.font-color-green {
-  color: #2ECC71;
-}
-.font-color-red {
-  color: #D64541;
-}
-.font-color-purple {
-  color: #926FB1;
-}
-.font-color-crimson {
-  color: #F62459;
-}
-
 .nav-dropdown {
   display: none;
   position: absolute;
   z-index: 10;
   width: 100vw;
   left: 0;
-  background-color: #67809f;
 }
 .nav-dropdown h2 {
   font-size: 2rem;
@@ -401,6 +378,48 @@ nav {
 }
 .nav-category:hover .nav-dropdown {
   display: block;
+}
+.nav-bar .theme-gray .theme {
+  color: #67809f;
+}
+.nav-bar .theme-gray .nav-dropdown {
+  background-color: rgb(81.6774193548, 102.9475806452, 129.3225806452);
+}
+.nav-bar .theme-yellow .theme {
+  color: #F7B322;
+}
+.nav-bar .theme-yellow .nav-dropdown {
+  background-color: rgb(221.9650655022, 153.6681222707, 8.0349344978);
+}
+.nav-bar .theme-blue .theme {
+  color: #4183D7;
+}
+.nav-bar .theme-blue .nav-dropdown {
+  background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
+}
+.nav-bar .theme-green .theme {
+  color: #2ECC71;
+}
+.nav-bar .theme-green .nav-dropdown {
+  background-color: rgb(36.616, 162.384, 89.948);
+}
+.nav-bar .theme-red .theme {
+  color: #D64541;
+}
+.nav-bar .theme-red .nav-dropdown {
+  background-color: rgb(187.5324675325, 44.4155844156, 40.4675324675);
+}
+.nav-bar .theme-purple .theme {
+  color: #926FB1;
+}
+.nav-bar .theme-purple .nav-dropdown {
+  background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
+}
+.nav-bar .theme-crimson .theme {
+  color: #F62459;
+}
+.nav-bar .theme-crimson .nav-dropdown {
+  background-color: rgb(221.8815789474, 9.1184210526, 62.8157894737);
 }
 
 .hero-image {
@@ -452,80 +471,83 @@ nav {
 .services-item {
   transition: transform 0.5s ease;
 }
-.services-item .theme-gray .theme {
+.services-item .theme-gray .theme, .services-item .theme-gray .theme-btn {
   background-color: #67809f;
 }
 .services-item .theme-gray:hover {
   background-color: #67809f;
   color: #fff;
 }
-.services-item .theme-gray:hover .theme {
+.services-item .theme-gray:hover .theme, .services-item .theme-gray:hover .theme-btn {
   background-color: #fff;
   color: #67809f;
 }
 .services-item .theme-yellow .theme {
+  background-color: #67809f;
+}
+.services-item .theme-yellow .theme-btn {
   background-color: #F7B322;
 }
 .services-item .theme-yellow:hover {
-  background-color: #F7B322;
+  background-color: #67809f;
   color: #fff;
 }
-.services-item .theme-yellow:hover .theme {
+.services-item .theme-yellow:hover .theme, .services-item .theme-yellow:hover .theme-btn {
   background-color: #fff;
-  color: #F7B322;
+  color: #67809f;
 }
-.services-item .theme-blue .theme {
+.services-item .theme-blue .theme, .services-item .theme-blue .theme-btn {
   background-color: #4183D7;
 }
 .services-item .theme-blue:hover {
   background-color: #4183D7;
   color: #fff;
 }
-.services-item .theme-blue:hover .theme {
+.services-item .theme-blue:hover .theme, .services-item .theme-blue:hover .theme-btn {
   background-color: #fff;
   color: #4183D7;
 }
-.services-item .theme-green .theme {
+.services-item .theme-green .theme, .services-item .theme-green .theme-btn {
   background-color: #2ECC71;
 }
 .services-item .theme-green:hover {
   background-color: #2ECC71;
   color: #fff;
 }
-.services-item .theme-green:hover .theme {
+.services-item .theme-green:hover .theme, .services-item .theme-green:hover .theme-btn {
   background-color: #fff;
   color: #2ECC71;
 }
-.services-item .theme-red .theme {
+.services-item .theme-red .theme, .services-item .theme-red .theme-btn {
   background-color: #D64541;
 }
 .services-item .theme-red:hover {
   background-color: #D64541;
   color: #fff;
 }
-.services-item .theme-red:hover .theme {
+.services-item .theme-red:hover .theme, .services-item .theme-red:hover .theme-btn {
   background-color: #fff;
   color: #D64541;
 }
-.services-item .theme-purple .theme {
+.services-item .theme-purple .theme, .services-item .theme-purple .theme-btn {
   background-color: #926FB1;
 }
 .services-item .theme-purple:hover {
   background-color: #926FB1;
   color: #fff;
 }
-.services-item .theme-purple:hover .theme {
+.services-item .theme-purple:hover .theme, .services-item .theme-purple:hover .theme-btn {
   background-color: #fff;
   color: #926FB1;
 }
-.services-item .theme-crimson .theme {
+.services-item .theme-crimson .theme, .services-item .theme-crimson .theme-btn {
   background-color: #F62459;
 }
 .services-item .theme-crimson:hover {
   background-color: #F62459;
   color: #fff;
 }
-.services-item .theme-crimson:hover .theme {
+.services-item .theme-crimson:hover .theme, .services-item .theme-crimson:hover .theme-btn {
   background-color: #fff;
   color: #F62459;
 }
@@ -762,43 +784,46 @@ nav {
   }
 }
 
-.news-spacing .theme-gray .theme {
+.news-spacing .theme-gray .theme, .news-spacing .theme-gray .theme-btn {
   background-color: #67809f;
 }
 .news-spacing .theme-gray h3 {
   color: #67809f;
 }
 .news-spacing .theme-yellow .theme {
+  background-color: #67809f;
+}
+.news-spacing .theme-yellow .theme-btn {
   background-color: #F7B322;
 }
 .news-spacing .theme-yellow h3 {
-  color: #F7B322;
+  color: #67809f;
 }
-.news-spacing .theme-blue .theme {
+.news-spacing .theme-blue .theme, .news-spacing .theme-blue .theme-btn {
   background-color: #4183D7;
 }
 .news-spacing .theme-blue h3 {
   color: #4183D7;
 }
-.news-spacing .theme-green .theme {
+.news-spacing .theme-green .theme, .news-spacing .theme-green .theme-btn {
   background-color: #2ECC71;
 }
 .news-spacing .theme-green h3 {
   color: #2ECC71;
 }
-.news-spacing .theme-red .theme {
+.news-spacing .theme-red .theme, .news-spacing .theme-red .theme-btn {
   background-color: #D64541;
 }
 .news-spacing .theme-red h3 {
   color: #D64541;
 }
-.news-spacing .theme-purple .theme {
+.news-spacing .theme-purple .theme, .news-spacing .theme-purple .theme-btn {
   background-color: #926FB1;
 }
 .news-spacing .theme-purple h3 {
   color: #926FB1;
 }
-.news-spacing .theme-crimson .theme {
+.news-spacing .theme-crimson .theme, .news-spacing .theme-crimson .theme-btn {
   background-color: #F62459;
 }
 .news-spacing .theme-crimson h3 {
