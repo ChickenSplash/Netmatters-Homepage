@@ -345,6 +345,7 @@ nav {
   align-items: center;
   padding-block: 18px;
   color: #fff;
+  position: relative;
 }
 .nav-button .small {
   font-size: 0.625rem;
@@ -376,11 +377,31 @@ nav {
 .nav-dropdown ul li {
   padding: 10px 15px 10px 0px;
 }
-.nav-category:hover .nav-dropdown {
+.nav-category:hover .nav-dropdown, .nav-category:hover .triangle {
   display: block;
+}
+.nav-bar .triangle {
+  display: none;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 47px 69px 0 69px;
+  transform: rotate(0deg);
+  position: absolute;
+  bottom: -47px;
+  z-index: 11;
 }
 .nav-bar .theme-gray .theme {
   color: #67809f;
+}
+.nav-bar .theme-gray .triangle {
+  border-color: #67809f transparent transparent transparent;
+}
+.nav-bar .theme-gray:hover {
+  background-color: #67809f;
+}
+.nav-bar .theme-gray:hover .theme {
+  color: #fff;
 }
 .nav-bar .theme-gray .nav-dropdown {
   background-color: rgb(81.6774193548, 102.9475806452, 129.3225806452);
@@ -388,11 +409,29 @@ nav {
 .nav-bar .theme-yellow .theme {
   color: #F7B322;
 }
+.nav-bar .theme-yellow .triangle {
+  border-color: #F7B322 transparent transparent transparent;
+}
+.nav-bar .theme-yellow:hover {
+  background-color: #F7B322;
+}
+.nav-bar .theme-yellow:hover .theme {
+  color: #fff;
+}
 .nav-bar .theme-yellow .nav-dropdown {
   background-color: rgb(221.9650655022, 153.6681222707, 8.0349344978);
 }
 .nav-bar .theme-blue .theme {
   color: #4183D7;
+}
+.nav-bar .theme-blue .triangle {
+  border-color: #4183D7 transparent transparent transparent;
+}
+.nav-bar .theme-blue:hover {
+  background-color: #4183D7;
+}
+.nav-bar .theme-blue:hover .theme {
+  color: #fff;
 }
 .nav-bar .theme-blue .nav-dropdown {
   background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
@@ -400,11 +439,29 @@ nav {
 .nav-bar .theme-green .theme {
   color: #2ECC71;
 }
+.nav-bar .theme-green .triangle {
+  border-color: #2ECC71 transparent transparent transparent;
+}
+.nav-bar .theme-green:hover {
+  background-color: #2ECC71;
+}
+.nav-bar .theme-green:hover .theme {
+  color: #fff;
+}
 .nav-bar .theme-green .nav-dropdown {
   background-color: rgb(36.616, 162.384, 89.948);
 }
 .nav-bar .theme-red .theme {
   color: #D64541;
+}
+.nav-bar .theme-red .triangle {
+  border-color: #D64541 transparent transparent transparent;
+}
+.nav-bar .theme-red:hover {
+  background-color: #D64541;
+}
+.nav-bar .theme-red:hover .theme {
+  color: #fff;
 }
 .nav-bar .theme-red .nav-dropdown {
   background-color: rgb(187.5324675325, 44.4155844156, 40.4675324675);
@@ -412,11 +469,29 @@ nav {
 .nav-bar .theme-purple .theme {
   color: #926FB1;
 }
+.nav-bar .theme-purple .triangle {
+  border-color: #926FB1 transparent transparent transparent;
+}
+.nav-bar .theme-purple:hover {
+  background-color: #926FB1;
+}
+.nav-bar .theme-purple:hover .theme {
+  color: #fff;
+}
 .nav-bar .theme-purple .nav-dropdown {
   background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
 }
 .nav-bar .theme-crimson .theme {
   color: #F62459;
+}
+.nav-bar .theme-crimson .triangle {
+  border-color: #F62459 transparent transparent transparent;
+}
+.nav-bar .theme-crimson:hover {
+  background-color: #F62459;
+}
+.nav-bar .theme-crimson:hover .theme {
+  color: #fff;
 }
 .nav-bar .theme-crimson .nav-dropdown {
   background-color: rgb(221.8815789474, 9.1184210526, 62.8157894737);

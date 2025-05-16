@@ -74,6 +74,15 @@
       .theme {
         color: $color;
       }
+      .triangle {
+        border-color: $color transparent transparent transparent;
+      }
+      &:hover {
+        background-color: $color;
+      }
+      &:hover .theme {
+        color: #fff;
+      }
       .nav-dropdown {
         background-color: darken($color, 10%);
       }
