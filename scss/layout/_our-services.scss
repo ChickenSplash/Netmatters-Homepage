@@ -17,6 +17,13 @@
             border: #ccc solid 1px;
             border-radius: 15px;
             box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+            // To fix a minor alignment issue
+            @media (min-width: $break-point-large) {
+                height: 328px;
+                .read-more-btn {
+                    margin-top: auto;
+                }
+            }
         }
 
         h3 {

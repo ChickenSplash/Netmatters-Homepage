@@ -5,6 +5,7 @@
 
   &-title {
     font-size: 2.25rem;
+    margin-top: 0px;
   }
 
   .container {
@@ -15,6 +16,8 @@
     }
   }
   p {
+    margin-block: 12px;
+    
     a {
       color: $color-light-text;
       text-decoration: none;
@@ -27,10 +30,16 @@
 }
 
 .row {
+  display: flex;
+  flex-direction: column;
   padding-inline: 15px;
   
   @media (min-width: $break-point-medium) {
     width: 50%;
+  }
+
+  &-btn {
+    margin-top: auto;
   }
 }
 
