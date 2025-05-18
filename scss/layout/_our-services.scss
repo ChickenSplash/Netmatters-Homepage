@@ -35,6 +35,10 @@
             font-size: 0.8125rem;
         }
 
+        .read-more-btn {
+            @extend %read-more-btn;
+        }
+
         [class^="icon-"] {
             font-size: 32px;
             color: $color-light-text;

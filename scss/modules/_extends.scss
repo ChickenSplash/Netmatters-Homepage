@@ -90,43 +90,25 @@
   }  
 }
 
-// About Section Buttons
+// General Button Styling
 
-%about-btn {
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.25rem;
-    padding: 10px 25px;
-    color: $color-light-text;
-    text-decoration: none;
-    border-radius: 3px;
-}
-
-@mixin about-btn($color, $type) {
+@mixin base-btn($color, $type) {
   .btn-#{$type} {
-    @extend %about-btn;
     background-color: $color;
+    &:hover {
+      background-color: darken($color, 5%);
+    }
     @content;
-  }  
+  }
 }
 
 // Social Buttons
 
-@mixin social-button($social, $color) {
-    .icon-#{$social}:hover {
-        background-color: $color;
+@mixin social-button($social, $hover-color) {
+  .btn-#{$social} {
+    &:hover {
+      background-color: $hover-color;
     }
-}
-
-// View More Link (in services and article sections)
-
-%view-more-link {
-  color: $color-dark-text;
-  text-decoration: none;
-  font-size: 1.5rem;
-
-  &:hover {
-    text-decoration: underline;
+    @content;
   }
 }

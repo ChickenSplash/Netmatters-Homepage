@@ -98,6 +98,12 @@
         }
     }
 
+    &-article {
+        .read-more-btn {
+            @extend %read-more-btn
+        }
+    }
+
     &-thumbnail {
         display: block;
         width: 100%;

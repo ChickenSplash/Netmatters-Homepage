@@ -1,22 +1,44 @@
-header .container {
-    display: flex;
-    align-items: center;
-    min-height: 110px;
-    
-    img {
-        display: inline-block;
-        max-width: 100%;
-    }
-    
-    @include about-btn(#4183d7, "support") {
-        &:hover {
-            background-color: darken(#4183d7, 5%);
+.header {
+    &-top {
+        display: flex;
+        align-items: center;
+        height: 81px;
+
+        img {
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        .search-items {
+            display: none;
         }
     }
+    
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        height: 47px;
+        margin: 20px 15px;
 
-    @include about-btn(#999aa2, "contact") {
-        &:hover {
-            background-color: darken(#999aa2, 5%);
+        @media (min-width: $break-point-small) {
+            display: none;
+        }
+
+        .icon-search {
+            padding: 11px;
+            font-size: 20px;
+        }
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 5px 15px;
+            background-color: rgba(0, 0, 0, .1);
+            border: 2px solid rgba(0, 0, 0, .1);
+            font-size: 0.875rem;
         }
     }
 }

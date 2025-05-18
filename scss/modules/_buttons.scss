@@ -1,4 +1,4 @@
-.read-more-btn {
+%read-more-btn {
     display: inline-block;
     font-size: 1rem;
     padding: 5px 15px;
@@ -7,4 +7,40 @@
     border-radius: 3px;
     line-height: 35px;
     text-transform: uppercase;
+}
+
+%btn-base {
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 10px 25px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+%btn-about {
+   margin: 10px 10px 0px 0px;
+   border-radius: 6px; 
+}
+
+%btn-social {
+    background-color: $color-base-dark;
+    color: $color-light-text;
+    font-size: 26px;
+    padding: 12px 22px 16px;
+    margin: 0 10px 10px 0;
+}
+
+// View More Link (in services and article sections)
+
+%view-more-link {
+  color: $color-dark-text;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

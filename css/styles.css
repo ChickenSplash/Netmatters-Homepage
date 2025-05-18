@@ -217,7 +217,18 @@
   content: "\eaca";
 }
 
-.btn-trustpilot-reviews, .btn-google-reviews, .btn-about, .btn-banner, header .container .btn-contact, header .container .btn-support {
+.news-article .read-more-btn, .services-item .read-more-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.btn-trustpilot, .btn-google, .btn-about, .btn-banner {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -228,6 +239,19 @@
   border-radius: 3px;
 }
 
+.btn-trustpilot, .btn-google, .btn-about {
+  margin: 10px 10px 0px 0px;
+  border-radius: 6px;
+}
+
+.btn-instagram, .btn-x, .btn-linkedin, .btn-facebook {
+  background-color: #272936;
+  color: #fff;
+  font-size: 26px;
+  padding: 12px 22px 16px;
+  margin: 0 10px 10px 0;
+}
+
 .news-footer a, .news-header a, .services-footer a, .services-header a {
   color: #333645;
   text-decoration: none;
@@ -235,17 +259,6 @@
 }
 .news-footer a:hover, .news-header a:hover, .services-footer a:hover, .services-header a:hover {
   text-decoration: underline;
-}
-
-.read-more-btn {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 5px 15px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 3px;
-  line-height: 35px;
-  text-transform: uppercase;
 }
 
 body {
@@ -297,26 +310,47 @@ a {
   color: inherit;
 }
 
-header .container {
+h2 {
+  font-weight: normal;
+}
+
+.header-top {
   display: flex;
   align-items: center;
-  min-height: 110px;
+  height: 81px;
 }
-header .container img {
+.header-top img {
   display: inline-block;
   max-width: 100%;
 }
-header .container .btn-support {
-  background-color: #4183d7;
+.header-top .search-items {
+  display: none;
 }
-header .container .btn-support:hover {
-  background-color: rgb(44.2608695652, 117.2913043478, 210.2391304348);
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  height: 47px;
+  margin: 20px 15px;
 }
-header .container .btn-contact {
-  background-color: #999aa2;
+@media (min-width: 768px) {
+  .header-bottom {
+    display: none;
+  }
 }
-header .container .btn-contact:hover {
-  background-color: rgb(139.6615384615, 140.7923076923, 149.8384615385);
+.header-bottom .icon-search {
+  padding: 11px;
+  font-size: 20px;
+}
+.header-bottom input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
 }
 
 .search-items {
@@ -511,7 +545,6 @@ nav {
 .hero-image {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 550px;
   background-image: url(../img/hero-image.webp);
   background-size: cover;
@@ -533,13 +566,25 @@ nav {
 }
 .hero-text {
   color: #fff;
-  font-size: 1.5rem;
   text-align: center;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-block: 75px 0px;
+}
+.hero-text p {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 @media (min-width: 992px) {
   .hero-text {
     text-align: left;
-    font-size: 2.5rem;
+  }
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero-text p {
+    font-size: 1.5rem;
   }
 }
 .hero-text p {
@@ -786,8 +831,16 @@ nav {
     width: 50%;
   }
 }
-.row-btn {
+.row-btn, .row-btn-top {
   margin-top: auto;
+}
+.row-btn-top, .row-btn-top-top {
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .row-btn-top, .row-btn-top-top {
+    margin-bottom: 0px;
+  }
 }
 
 .quote {
@@ -807,25 +860,22 @@ nav {
 
 .btn-about {
   background-color: #272936;
-  margin: 10px 10px 0px 0px;
 }
 .btn-about:hover {
   background-color: rgb(28.3064516129, 29.7580645161, 39.1935483871);
 }
 
-.btn-google-reviews {
+.btn-google {
   background-color: #4387f6;
-  margin: 10px 10px 0px 0px;
 }
-.btn-google-reviews:hover {
+.btn-google:hover {
   background-color: rgb(42.6649746193, 119.4670050761, 244.8350253807);
 }
 
-.btn-trustpilot-reviews {
+.btn-trustpilot {
   background-color: #00b67b;
-  margin: 10px 10px 0px 0px;
 }
-.btn-trustpilot-reviews:hover {
+.btn-trustpilot:hover {
   background-color: rgb(0, 156.5, 105.7664835165);
 }
 
@@ -1014,7 +1064,7 @@ footer .footer-row .footer-menu {
 }
 
 .footer-bottom {
-  background-color: #212330;
+  background-color: #272936;
   font-size: 0.8125rem;
   padding-inline: 15px;
 }
@@ -1039,31 +1089,19 @@ footer, .footer-bottom {
   width: 320px;
 }
 
-.social-logo {
-  background-color: #272936;
-  color: #fff;
-  font-size: 26px;
-  padding: 12px 22px 16px;
-  margin: 0 10px 10px 0;
-}
-
-.footer-social-logos a {
-  text-decoration: none;
-}
-
-.icon-facebook:hover {
+.btn-facebook:hover {
   background-color: #3b5998;
 }
 
-.icon-linkedin2:hover {
+.btn-linkedin:hover {
   background-color: #0077b5;
 }
 
-.icon-x:hover {
+.btn-x:hover {
   background-color: #00aced;
 }
 
-.icon-instagram:hover {
+.btn-instagram:hover {
   background-color: #d93175;
 }
 

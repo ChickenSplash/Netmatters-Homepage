@@ -38,8 +38,16 @@
     width: 50%;
   }
 
-  &-btn {
+  &-btn, &-btn-top {
     margin-top: auto;
+
+    &-top {
+      margin-bottom: 50px;
+
+      @media (min-width: $break-point-medium) {
+        margin-bottom: 0px;
+      }
+    }
   }
 }
 
@@ -59,27 +67,19 @@
   font-size: 3.125rem;
 }
 
-@include about-btn($color-base-dark, "about") {
-  margin: 10px 10px 0px 0px;
-  
-  &:hover {
-    background-color: darken($color-base-dark, 5%);
-  }
+// Buttons
+
+@include base-btn($color-base-dark, "about") {
+  @extend %btn-base;
+  @extend %btn-about;
 }
 
-@include about-btn(#4387f6, "google-reviews") {
-  margin: 10px 10px 0px 0px;
-
-  &:hover {
-    background-color: darken(#4387f6, 5%);
-  }
+@include base-btn(#4387f6, "google") {
+  @extend %btn-base;
+  @extend %btn-about;
 }
 
-@include about-btn(#00b67b, "trustpilot-reviews") {
-  margin: 10px 10px 0px 0px;
-
-  &:hover {
-    background-color: darken(#00b67b, 5%);
-  }
+@include base-btn(#00b67b, "trustpilot") {
+  @extend %btn-base;
+  @extend %btn-about;
 }
-
