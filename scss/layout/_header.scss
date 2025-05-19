@@ -9,8 +9,8 @@
         }
 
         img {
-            display: inline-block;
-            max-width: 30%;
+            display: block;
+            max-width: 75%;
         }
 
         .search-items {
@@ -27,8 +27,12 @@
 }
 
 .search-section {
-    display: flex;
-    height: 100%;
+    display: none;
+
+    @media (min-width: $break-point-small) {
+        display: flex;
+        height: 100%;
+    }
 }
 
 header {
@@ -70,6 +74,15 @@ header {
 
         @media (min-width: $break-point-small) {
             display: inline-flex;
+        }
+    }
+
+    .phone-link {
+        @extend %view-more-link;
+        font-size: 32px;
+
+        @media (min-width: $break-point-small) {
+            display: none;
         }
     }
 

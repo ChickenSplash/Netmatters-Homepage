@@ -252,11 +252,12 @@
   margin: 0 10px 10px 0;
 }
 
-.news-footer a, .news-header a, .services-footer a, .services-header a {
+.news-footer a, .news-header a, .services-footer a, .services-header a, header .phone-link {
   text-decoration: none;
   font-size: 1.5rem;
+  cursor: pointer;
 }
-.news-footer a:hover, .news-header a:hover, .services-footer a:hover, .services-header a:hover {
+.news-footer a:hover, .news-header a:hover, .services-footer a:hover, .services-header a:hover, header .phone-link:hover {
   text-decoration: underline;
 }
 
@@ -324,8 +325,8 @@ h2 {
   }
 }
 .header-top img {
-  display: inline-block;
-  max-width: 30%;
+  display: block;
+  max-width: 75%;
 }
 .header-top .search-items {
   display: flex;
@@ -338,8 +339,13 @@ h2 {
 }
 
 .search-section {
-  display: flex;
-  height: 100%;
+  display: none;
+}
+@media (min-width: 768px) {
+  .search-section {
+    display: flex;
+    height: 100%;
+  }
 }
 
 header {
@@ -390,6 +396,14 @@ header .btn-search:hover {
 @media (min-width: 768px) {
   header .btn-search {
     display: inline-flex;
+  }
+}
+header .phone-link {
+  font-size: 32px;
+}
+@media (min-width: 768px) {
+  header .phone-link {
+    display: none;
   }
 }
 header .square-btn {
@@ -611,19 +625,19 @@ nav {
   background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
 }
 .nav-bar .theme-green .theme {
-  color: #2ECC71;
+  color: red;
 }
 .nav-bar .theme-green .triangle {
-  border-color: #2ECC71 transparent transparent transparent;
+  border-color: red transparent transparent transparent;
 }
 .nav-bar .theme-green:hover {
-  background-color: #2ECC71;
+  background-color: red;
 }
 .nav-bar .theme-green:hover .theme {
   color: #fff;
 }
 .nav-bar .theme-green .nav-dropdown {
-  background-color: rgb(36.616, 162.384, 89.948);
+  background-color: #cc0000;
 }
 .nav-bar .theme-red .theme {
   color: #D64541;
@@ -767,15 +781,15 @@ nav {
   color: #4183D7;
 }
 .services-item .theme-green .theme, .services-item .theme-green .theme-btn {
-  background-color: #2ECC71;
+  background-color: red;
 }
 .services-item .theme-green:hover {
-  background-color: #2ECC71;
+  background-color: red;
   color: #fff;
 }
 .services-item .theme-green:hover .theme, .services-item .theme-green:hover .theme-btn {
   background-color: #fff;
-  color: #2ECC71;
+  color: red;
 }
 .services-item .theme-red .theme, .services-item .theme-red .theme-btn {
   background-color: #D64541;
@@ -1087,10 +1101,10 @@ nav {
   color: #4183D7;
 }
 .news-spacing .theme-green .theme, .news-spacing .theme-green .theme-btn {
-  background-color: #2ECC71;
+  background-color: red;
 }
 .news-spacing .theme-green h3 {
-  color: #2ECC71;
+  color: red;
 }
 .news-spacing .theme-red .theme, .news-spacing .theme-red .theme-btn {
   background-color: #D64541;
