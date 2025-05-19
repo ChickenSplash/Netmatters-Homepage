@@ -10,7 +10,7 @@
 
         img {
             display: block;
-            max-width: 75%;
+            min-width: 0px;
         }
 
         .search-items {
@@ -37,14 +37,11 @@
 
 header {
     padding-inline: 15px;
-    //could be better written
 
     @include base-btn(map-get($theme, "blue"), "support") {
-        @extend %btn-base;
         display: none;
-        height: 100%;
-        padding-inline: 15px;
-        font-size: 1.125rem;
+        @extend %btn-base;
+        @extend %btn-header;
 
         @media (min-width: $break-point-medium) {
             display: inline-flex;
@@ -52,12 +49,9 @@ header {
     }
 
     @include base-btn(#999aa2, "contact") {
-        @extend %btn-base;
         display: none;
-        height: 100%;
-        padding-inline: 15px;
-        font-size: 1.125rem;
-        justify-content: center;
+        @extend %btn-base;
+        @extend %btn-header;
 
         @media (min-width: $break-point-medium) {
             display: inline-flex;
@@ -65,11 +59,9 @@ header {
     }
 
     @include base-btn(#999aa2, "search") {
-        @extend %btn-base;
         display: none;
-        height: 100%;
-        padding-inline: 15px;
-        font-size: 1.125rem;
+        @extend %btn-base;
+        @extend %btn-header;
         justify-content: center;
 
         @media (min-width: $break-point-small) {
@@ -109,13 +101,8 @@ header {
         }
 
         input {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            padding: 5px 15px;
+            @extend %header-search-box;
             background-color: rgba(0, 0, 0, .1);
-            border: 2px solid rgba(0, 0, 0, .1);
-            font-size: 0.875rem;
         }
     }
 
@@ -145,42 +132,35 @@ header {
         }
 
         input {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            padding: 5px 15px;
-            border: 2px solid rgba(0, 0, 0, .1);
-            border-right: none;
-            font-size: 0.875rem;
+            @extend %header-search-box;
         }
+    }
+
+    @include base-btn($color-base-dark, "menu") {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 56px;
+        border-radius: 3px;
+        cursor: pointer;
     }
 }
 
-.btn-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-base-dark;
-    height: 100%;
-    width: 56px;
-    border-radius: 3px;
-}
+// .menu-toggle {
+//     width: 35px;
+//     height: 30px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
 
-.menu-toggle {
-    width: 35px;
-    height: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.bar {
-    height: 4px;
-    background-color: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
-}
+// .bar {
+//     height: 4px;
+//     background-color: #fff;
+//     border-radius: 2px;
+//     transition: 0.3s;
+// }
 
 /* The magic happens here */
 // .menu-toggle:active .bar:nth-child(1) {
