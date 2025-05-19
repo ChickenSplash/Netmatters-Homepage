@@ -3,24 +3,88 @@
         display: flex;
         align-items: center;
         height: 81px;
+        
+        @media (min-width: $break-point-small) {
+            height: 110px;
+        }
 
         img {
             display: inline-block;
-            max-width: 100%;
+            max-width: 30%;
         }
 
         .search-items {
-            display: none;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            height: 56px;
+
+            & > * {
+                margin-left: 20px;
+            }
         }
     }
-    
-    &-bottom {
+}
+
+.search-section {
+    display: flex;
+    height: 100%;
+}
+
+header {
+    padding-inline: 15px;
+    //could be better written
+
+    @include base-btn(map-get($theme, "blue"), "support") {
+        @extend %btn-base;
+        display: none;
+        height: 100%;
+        padding-inline: 15px;
+        font-size: 1.125rem;
+
+        @media (min-width: $break-point-medium) {
+            display: inline-flex;
+        }
+    }
+
+    @include base-btn(#999aa2, "contact") {
+        @extend %btn-base;
+        display: none;
+        height: 100%;
+        padding-inline: 15px;
+        font-size: 1.125rem;
+        justify-content: center;
+
+        @media (min-width: $break-point-medium) {
+            display: inline-flex;
+        }
+    }
+
+    @include base-btn(#999aa2, "search") {
+        @extend %btn-base;
+        display: none;
+        height: 100%;
+        padding-inline: 15px;
+        font-size: 1.125rem;
+        justify-content: center;
+
+        @media (min-width: $break-point-small) {
+            display: inline-flex;
+        }
+    }
+
+    .square-btn {
+        width: 56px;
+        margin-left: auto;
+    }
+
+    .mobile-search-bar {
         display: flex;
         align-items: center;
         justify-content: end;
         position: relative;
         height: 47px;
-        margin: 20px 15px;
+        margin-block: 20px;
 
         @media (min-width: $break-point-small) {
             display: none;
@@ -41,8 +105,79 @@
             font-size: 0.875rem;
         }
     }
+
+    .desktop-search-bar {
+        display: none;
+
+        @media (min-width: $break-point-small) and (max-width: $break-point-medium), (min-width: $break-point-large) {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            position: relative;
+            height: 100%;
+        }
+
+        @media (min-width: $break-point-small) and (max-width: $break-point-medium) {
+            width: 174px;
+        }
+
+        @media (min-width: $break-point-large) {
+            width: 240px;
+        }
+
+        .icon-search {
+            padding: 11px;
+            font-size: 20px;
+            background-color: gray;
+        }
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 5px 15px;
+            border: 2px solid rgba(0, 0, 0, .1);
+            border-right: none;
+            font-size: 0.875rem;
+        }
+    }
 }
 
-.search-items {
-    margin-left: auto;
+.btn-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-base-dark;
+    height: 100%;
+    width: 56px;
+    border-radius: 3px;
 }
+
+.menu-toggle {
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* The magic happens here */
+// .menu-toggle:active .bar:nth-child(1) {
+//   transform: rotate(45deg) translate(5px, 5px);
+// }
+
+// .menu-toggle:active .bar:nth-child(2) {
+//   opacity: 0;
+// }
+
+// .menu-toggle:active .bar:nth-child(3) {
+//   transform: rotate(-45deg) translate(6px, -6px);
+// }

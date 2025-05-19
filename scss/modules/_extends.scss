@@ -92,8 +92,8 @@
 
 // General Button Styling
 
-@mixin base-btn($color, $type) {
-  .btn-#{$type} {
+@mixin base-btn($color, $class) {
+  .btn-#{$class} {
     background-color: $color;
     &:hover {
       background-color: darken($color, 5%);
