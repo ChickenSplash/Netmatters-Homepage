@@ -13,6 +13,12 @@ footer {
         font-size: 0.8125rem;
     }
 
+    .footer-logo {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+    }
+
     .footer-row {
         display: flex;
         flex-wrap: wrap;
@@ -61,10 +67,6 @@ footer, .footer-bottom {
             display: flex;
         }
     }   
-}
-
-#footer-logo {
-    width: 320px;
 }
 
 // Footer Social Buttons

@@ -3,16 +3,71 @@
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
-    overflow-x: hidden;
-    padding-block: 50px;
+    overflow-x: clip;
 }
 
 .partner-logo {
-    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
     margin-inline: 50px;
     filter: grayscale(100%);
+
+    h3, p {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        margin: 0px;
+    }
+
+    p {
+        font-size: 0.8125rem;
+        margin-block: 15px;
+    }
+
+    .partner-info {
+        display: none;
+        position: absolute;
+        width: 280px;
+        bottom: 200px;
+        background: $color-base;
+        color: $color-light-text;
+        padding: 20px;
+        z-index: 10;
+    }
+
+    img {
+        max-height: 70px;   
+    }
+
+    .triangle {
+        display: none;
+        position: absolute;
+        bottom: 160px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 40px 40px 0 40px;
+        border-color: $color-base transparent transparent transparent;
+        transform: rotate(0deg);
+    }
 
     &:hover {
         filter: grayscale(0%)
     }
+
+    &:hover .partner-info, &:hover .triangle {
+        display: block;
+    }
+}
+
+// just so the tooltips align with eachother
+
+.img-container {
+    height: 70px;
+    padding-block: 100px;
+    display: flex;
+    align-items: center;
 }

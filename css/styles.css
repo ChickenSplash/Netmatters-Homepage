@@ -260,6 +260,7 @@ header .btn-search, header .btn-contact, header .btn-support {
 
 .news-footer a, .news-header a, .services-footer a, .services-header a, header .phone-link {
   text-decoration: none;
+  font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -901,17 +902,63 @@ nav {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   align-items: center;
-  overflow-x: hidden;
-  padding-block: 50px;
+  overflow-x: clip;
 }
 
 .partner-logo {
-  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
   margin-inline: 50px;
   filter: grayscale(100%);
 }
+.partner-logo h3, .partner-logo p {
+  text-align: center;
+}
+.partner-logo h3 {
+  font-size: 1.125rem;
+  margin: 0px;
+}
+.partner-logo p {
+  font-size: 0.8125rem;
+  margin-block: 15px;
+}
+.partner-logo .partner-info {
+  display: none;
+  position: absolute;
+  width: 280px;
+  bottom: 200px;
+  background: #323544;
+  color: #fff;
+  padding: 20px;
+  z-index: 10;
+}
+.partner-logo img {
+  max-height: 70px;
+}
+.partner-logo .triangle {
+  display: none;
+  position: absolute;
+  bottom: 160px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 40px 40px 0 40px;
+  border-color: #323544 transparent transparent transparent;
+  transform: rotate(0deg);
+}
 .partner-logo:hover {
   filter: grayscale(0%);
+}
+.partner-logo:hover .partner-info, .partner-logo:hover .triangle {
+  display: block;
+}
+
+.img-container {
+  height: 70px;
+  padding-block: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .about {
@@ -1159,6 +1206,11 @@ footer h4 {
 footer li a {
   font-size: 0.8125rem;
 }
+footer .footer-logo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+}
 footer .footer-row {
   display: flex;
   flex-wrap: wrap;
@@ -1205,10 +1257,6 @@ footer, .footer-bottom {
   footer .container, .footer-bottom .container {
     display: flex;
   }
-}
-
-#footer-logo {
-  width: 320px;
 }
 
 .btn-facebook:hover {
