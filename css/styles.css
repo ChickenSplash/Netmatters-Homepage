@@ -217,7 +217,7 @@
   content: "\eaca";
 }
 
-.news-article .read-more-btn, .services-item .read-more-btn {
+.news-article .read-more-btn, .partner-logo [class^=btn], .services-item .read-more-btn {
   display: inline-block;
   font-size: 1rem;
   padding: 5px 15px;
@@ -369,10 +369,11 @@ header {
 }
 header .btn-support {
   background-color: #4183D7;
+  transition: background-color 0.2s ease;
   display: none;
 }
 header .btn-support:hover {
-  background-color: rgb(44.2608695652, 117.2913043478, 210.2391304348);
+  background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
 }
 @media (min-width: 992px) {
   header .btn-support {
@@ -381,10 +382,11 @@ header .btn-support:hover {
 }
 header .btn-contact {
   background-color: #999aa2;
+  transition: background-color 0.2s ease;
   display: none;
 }
 header .btn-contact:hover {
-  background-color: rgb(139.6615384615, 140.7923076923, 149.8384615385);
+  background-color: rgb(126.3230769231, 127.5846153846, 137.6769230769);
 }
 @media (min-width: 992px) {
   header .btn-contact {
@@ -393,11 +395,12 @@ header .btn-contact:hover {
 }
 header .btn-search {
   background-color: #999aa2;
+  transition: background-color 0.2s ease;
   display: none;
   justify-content: center;
 }
 header .btn-search:hover {
-  background-color: rgb(139.6615384615, 140.7923076923, 149.8384615385);
+  background-color: rgb(126.3230769231, 127.5846153846, 137.6769230769);
 }
 @media (min-width: 768px) {
   header .btn-search {
@@ -465,6 +468,7 @@ header .desktop-search-bar .icon-search {
 }
 header .btn-menu {
   background-color: #272936;
+  transition: background-color 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -474,7 +478,7 @@ header .btn-menu {
   cursor: pointer;
 }
 header .btn-menu:hover {
-  background-color: rgb(28.3064516129, 29.7580645161, 39.1935483871);
+  background-color: rgb(17.6129032258, 18.5161290323, 24.3870967742);
 }
 
 /* The magic happens here */
@@ -714,14 +718,12 @@ nav {
 
 .btn-banner {
   background-color: #926fb1;
+  transition: background-color 0.2s ease;
 }
 .btn-banner:hover {
-  background-color: rgb(133.4797297297, 94.4594594595, 168.0405405405);
+  background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
 }
 
-.services-item {
-  transition: transform 0.5s ease;
-}
 .services-item .theme-gray .theme, .services-item .theme-gray .theme-btn {
   background-color: #67809F;
 }
@@ -813,6 +815,10 @@ nav {
   border: #ccc solid 1px;
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+.services-item a:hover {
+  transform: translateY(-10px);
 }
 @media (min-width: 1260px) {
   .services-item a {
@@ -838,9 +844,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.services-item:hover {
-  transform: translateY(-10px);
 }
 
 .services-header {
@@ -905,6 +908,62 @@ nav {
   overflow-x: clip;
 }
 
+.btn-gray {
+  background-color: #67809F;
+  transition: background-color 0.2s ease;
+}
+.btn-gray:hover {
+  background-color: rgb(81.6774193548, 102.9475806452, 129.3225806452);
+}
+
+.btn-yellow {
+  background-color: #F7B322;
+  transition: background-color 0.2s ease;
+}
+.btn-yellow:hover {
+  background-color: rgb(221.9650655022, 153.6681222707, 8.0349344978);
+}
+
+.btn-blue {
+  background-color: #4183D7;
+  transition: background-color 0.2s ease;
+}
+.btn-blue:hover {
+  background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
+}
+
+.btn-green {
+  background-color: #2ECC71;
+  transition: background-color 0.2s ease;
+}
+.btn-green:hover {
+  background-color: rgb(36.616, 162.384, 89.948);
+}
+
+.btn-red {
+  background-color: #D64541;
+  transition: background-color 0.2s ease;
+}
+.btn-red:hover {
+  background-color: rgb(187.5324675325, 44.4155844156, 40.4675324675);
+}
+
+.btn-purple {
+  background-color: #926FB1;
+  transition: background-color 0.2s ease;
+}
+.btn-purple:hover {
+  background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
+}
+
+.btn-crimson {
+  background-color: #F62459;
+  transition: background-color 0.2s ease;
+}
+.btn-crimson:hover {
+  background-color: rgb(221.8815789474, 9.1184210526, 62.8157894737);
+}
+
 .partner-logo {
   display: flex;
   justify-content: center;
@@ -923,8 +982,14 @@ nav {
   font-size: 0.8125rem;
   margin-block: 15px;
 }
+.partner-logo [class^=btn] {
+  display: inline-flex;
+  align-items: center;
+}
 .partner-logo .partner-info {
   display: none;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   width: 280px;
   bottom: 200px;
@@ -951,7 +1016,7 @@ nav {
   filter: grayscale(0%);
 }
 .partner-logo:hover .partner-info, .partner-logo:hover .triangle {
-  display: block;
+  display: flex;
 }
 
 .img-container {
@@ -1028,23 +1093,26 @@ nav {
 
 .btn-about {
   background-color: #272936;
+  transition: background-color 0.2s ease;
 }
 .btn-about:hover {
-  background-color: rgb(28.3064516129, 29.7580645161, 39.1935483871);
+  background-color: rgb(17.6129032258, 18.5161290323, 24.3870967742);
 }
 
 .btn-google {
   background-color: #4387f6;
+  transition: background-color 0.2s ease;
 }
 .btn-google:hover {
-  background-color: rgb(42.6649746193, 119.4670050761, 244.8350253807);
+  background-color: rgb(18.3299492386, 103.9340101523, 243.6700507614);
 }
 
 .btn-trustpilot {
   background-color: #00b67b;
+  transition: background-color 0.2s ease;
 }
 .btn-trustpilot:hover {
-  background-color: rgb(0, 156.5, 105.7664835165);
+  background-color: rgb(0, 131, 88.532967033);
 }
 
 .news-header {
@@ -1076,13 +1144,13 @@ nav {
   display: block;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   position: relative;
+  transition: transform 0.5s ease;
+}
+.news-article:hover {
+  transform: translateY(-10px);
 }
 .news-spacing {
   padding: 30px 15px 0px;
-  transition: transform 0.5s ease;
-}
-.news-spacing:hover {
-  transform: translateY(-10px);
 }
 @media (min-width: 768px) {
   .news-spacing {

@@ -17,7 +17,14 @@
             border: #ccc solid 1px;
             border-radius: 15px;
             box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+
+            transition: transform 0.5s ease;
+            &:hover {
+                transform: translateY(-10px);
+            }
+            
             // To fix a minor alignment issue
+            
             @media (min-width: $break-point-large) {
                 height: 328px;
                 .read-more-btn {
@@ -48,11 +55,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        
-        transition: transform 0.5s ease;
-        &:hover {
-            transform: translateY(-10px);
         }
     }
 }

@@ -34,15 +34,14 @@
         display: block;
         box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
         position: relative;
+        transition: transform 0.5s ease;
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
 
     &-spacing {
         padding: 30px 15px 0px;
-        transition: transform 0.5s ease;
-
-        &:hover {
-            transform: translateY(-10px);
-        }
 
         @media (min-width: $break-point-small) {
             flex: 1;

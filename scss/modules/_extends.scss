@@ -97,8 +97,9 @@
 @mixin base-btn($color, $class) {
   .btn-#{$class} {
     background-color: $color;
+    transition: background-color 0.2s ease;
     &:hover {
-      background-color: darken($color, 5%);
+      background-color: darken($color, 10%);
     }
     @content;
   }
@@ -112,5 +113,20 @@
       background-color: $hover-color;
     }
     @content;
+  }
+}
+
+// perhaps the better option over base-btn()
+
+@mixin better-base-btn() {
+  @each $name, $color in $theme {
+      .btn-#{$name} {
+      background-color: $color;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+      @content;
+    }
   }
 }
