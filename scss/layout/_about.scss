@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../utilities/index" as *;
+@use "../modules/index" as *;
+
 .about {
   background-color: $color-base;
   color: $color-light-text;
@@ -57,7 +61,7 @@
   font-size: 1.3rem;
 
   &-author {
-    color: darken($color-light-text, 30%);
+    color: color.adjust($color-light-text, $lightness: -30%);
     font-size: 1.125rem;
   }
 }

@@ -1,3 +1,7 @@
+@use "../utilities/index" as *;
+@use "../modules/index" as *;
+@use "sass:map";
+
 .header {
     &-top {
         display: flex;
@@ -38,7 +42,7 @@
 header {
     padding-inline: 15px;
 
-    @include base-btn(map-get($theme, "blue"), "support") {
+    @include base-btn(map.get($theme, "blue"), "support") {
         display: none;
         @extend %btn-base;
         @extend %btn-header;
@@ -166,36 +170,6 @@ header {
 }
 
 // Stuff to do:
-// update @import to @use and @forward
-// update darken() function to updated functions
 // Finish Hamburger menu
 // Try to have one universal button mixin
-
-
-// .menu-toggle {
-//     width: 35px;
-//     height: 30px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-// }
-
-// .bar {
-//     height: 4px;
-//     background-color: #fff;
-//     border-radius: 2px;
-//     transition: 0.3s;
-// }
-
-/* The magic happens here */
-// .menu-toggle:active .bar:nth-child(1) {
-//   transform: rotate(45deg) translate(5px, 5px);
-// }
-
-// .menu-toggle:active .bar:nth-child(2) {
-//   opacity: 0;
-// }
-
-// .menu-toggle:active .bar:nth-child(3) {
-//   transform: rotate(-45deg) translate(6px, -6px);
-// }
+// Update own @use namespaces

@@ -228,7 +228,7 @@
   text-transform: uppercase;
 }
 
-.btn-trustpilot, .btn-google, .btn-about, .btn-banner, header .btn-search, header .btn-contact, header .btn-support {
+.btn-about, .btn-google, .btn-trustpilot, .btn-banner, header .btn-support, header .btn-contact, header .btn-search {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -239,18 +239,18 @@
   border-radius: 3px;
 }
 
-header .btn-search, header .btn-contact, header .btn-support {
+header .btn-support, header .btn-contact, header .btn-search {
   height: 100%;
   padding-inline: 15px;
   font-size: 1.125rem;
 }
 
-.btn-trustpilot, .btn-google, .btn-about {
+.btn-about, .btn-google, .btn-trustpilot {
   margin: 10px 10px 0px 0px;
   border-radius: 6px;
 }
 
-.btn-instagram, .btn-x, .btn-linkedin, .btn-facebook {
+.btn-facebook, .btn-linkedin, .btn-x, .btn-instagram {
   background-color: #272936;
   color: #fff;
   font-size: 26px;
@@ -258,17 +258,17 @@ header .btn-search, header .btn-contact, header .btn-support {
   margin: 0 10px 10px 0;
 }
 
-.news-footer a, .news-header a, .services-footer a, .services-header a, header .phone-link {
+.news-header a, .news-footer a, .services-header a, .services-footer a, header .phone-link {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
 }
-.news-footer a:hover, .news-header a:hover, .services-footer a:hover, .services-header a:hover, header .phone-link:hover {
+.news-header a:hover, .news-footer a:hover, .services-header a:hover, .services-footer a:hover, header .phone-link:hover {
   text-decoration: underline;
 }
 
-header .desktop-search-bar input, header .mobile-search-bar input {
+header .mobile-search-bar input, header .desktop-search-bar input {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -500,7 +500,6 @@ header .btn-menu:hover {
   background-color: rgb(17.6129032258, 18.5161290323, 24.3870967742);
 }
 
-/* The magic happens here */
 nav {
   background-color: #323544;
   color: #fff;
@@ -1289,7 +1288,7 @@ nav {
 
 footer {
   background-color: #323544;
-  padding: 30px 15px 0px;
+  padding-top: 30px;
   position: relative;
 }
 footer h4 {
@@ -1309,6 +1308,7 @@ footer .footer-row {
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
+  padding-inline: 15px;
 }
 footer .footer-row .footer-menu {
   flex: 100%;
@@ -1330,11 +1330,13 @@ footer .footer-row .footer-menu {
     width: 200px;
   }
 }
+footer .company-info {
+  padding-inline: 15px;
+}
 
 .footer-bottom {
   background-color: #272936;
   font-size: 0.8125rem;
-  padding-inline: 15px;
 }
 .footer-bottom a {
   color: #fff;
@@ -1355,7 +1357,7 @@ footer, .footer-bottom {
 }
 
 .footer-bottom .container {
-  padding-block: 10px;
+  padding: 10px 15px;
 }
 @media (min-width: 768px) {
   .footer-bottom .container {

@@ -1,3 +1,2 @@
-@import "mixins";
-@import "extends";
-@import "buttons";
+@forward "extends";
+@forward "mixins";

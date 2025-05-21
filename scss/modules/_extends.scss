@@ -1,132 +1,68 @@
-// Modules
+@use "../utilities/index" as *;
 
-@use "sass:color";
+%read-more-btn {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 5px 15px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
 
-// Services Tiles Themes
+%btn-base {
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 10px 25px;
+    color: $color-light-text;
+    text-decoration: none;
+    border-radius: 3px;
+}
 
-@mixin service-tile-theme($theme) {
-  @each $name, $color in $theme {
-    &-#{$name} {
-      @if $name == "yellow" {
-        .theme {
-          background-color: map-get($theme, "gray");
-        }
-        .theme-btn {
-          background-color: $color;
-        }
-        &:hover {
-          .theme, .theme-btn {
-            background-color: #fff;
-            color: map-get($theme, "gray");
-          }
-          background-color: map-get($theme, "gray");
-          color: $color-light-text;
-        }
-      }
-      @else {
-        .theme, .theme-btn {
-          background-color: $color;
-        }
-        &:hover {
-          .theme, .theme-btn {
-            background-color: #fff;
-            color: $color;
-          }
-          background-color: $color;
-          color: $color-light-text;
-        }
-      }
-    }
+%btn-header {
+  height: 100%;
+  padding-inline: 15px;
+  font-size: 1.125rem;
+}
+
+%btn-about {
+   margin: 10px 10px 0px 0px;
+   border-radius: 6px; 
+}
+
+%btn-social {
+    background-color: $color-base-dark;
+    color: $color-light-text;
+    font-size: 26px;
+    padding: 12px 22px;
+    margin: 0 10px 10px 0;
+}
+
+// View More Link (in services and article sections)
+
+%view-more-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
-// News Tiles Themes
- 
-@mixin news-tile-theme($theme) {
-  @each $name, $color in $theme {
-    &-#{$name} {
-      @if $name == "yellow" {
-        .theme {
-          background-color: map-get($theme, "gray");
-        }
-        .theme-btn {
-          background-color: $color;
-        }
-        h3 {
-          color: map-get($theme, "gray");
-        }
-      }
-      @else {
-        .theme, .theme-btn {
-          background-color: $color;
-        }
-        h3 {
-          color: $color;
-        }
-      }
-    }
-  }
+// Input fields
+
+%header-search-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 5px 15px;
+  border: 2px solid rgba(0, 0, 0, .1);
+  font-size: 0.875rem;
 }
 
-// Nav Bar Colour Themes
-
-@mixin nav-bar-theme($theme) {
-  @each $name, $color in $theme {
-    &-#{$name} {
-      .theme {
-        color: $color;
-      }
-      .triangle {
-        border-color: $color transparent transparent transparent;
-      }
-      &:hover {
-        background-color: $color;
-      }
-      &:hover .theme {
-        color: #fff;
-      }
-      .nav-dropdown {
-        background-color: darken($color, 10%);
-      }
-    }
-  }  
-}
-
-// General Button Styling
-
-@mixin base-btn($color, $class) {
-  .btn-#{$class} {
-    background-color: $color;
-    transition: background-color 0.2s ease;
-    &:hover {
-      background-color: darken($color, 10%);
-    }
-    @content;
-  }
-}
-
-// Social Buttons
-
-@mixin social-button($social, $hover-color) {
-  .btn-#{$social} {
-    &:hover {
-      background-color: $hover-color;
-    }
-    @content;
-  }
-}
-
-// perhaps the better option over base-btn()
-
-@mixin better-base-btn() {
-  @each $name, $color in $theme {
-      .btn-#{$name} {
-      background-color: $color;
-      transition: background-color 0.2s ease;
-      &:hover {
-        background-color: darken($color, 10%);
-      }
-      @content;
-    }
-  }
-}
+// Schaltfläche

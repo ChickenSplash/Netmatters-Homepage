@@ -1,0 +1,134 @@
+// Modules
+
+@use "sass:map";
+@use "sass:color";
+@use "../utilities/index" as *;
+
+// Services Tiles Themes
+
+@mixin service-tile-theme($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      @if $name == "yellow" {
+        .theme {
+          background-color: map.get($theme, "gray");
+        }
+        .theme-btn {
+          background-color: $color;
+        }
+        &:hover {
+          .theme, .theme-btn {
+            background-color: #fff;
+            color: map.get($theme, "gray");
+          }
+          background-color: map.get($theme, "gray");
+          color: $color-light-text;
+        }
+      }
+      @else {
+        .theme, .theme-btn {
+          background-color: $color;
+        }
+        &:hover {
+          .theme, .theme-btn {
+            background-color: #fff;
+            color: $color;
+          }
+          background-color: $color;
+          color: $color-light-text;
+        }
+      }
+    }
+  }
+}
+
+// News Tiles Themes
+ 
+@mixin news-tile-theme($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      @if $name == "yellow" {
+        .theme {
+          background-color: map.get($theme, "gray");
+        }
+        .theme-btn {
+          background-color: $color;
+        }
+        h3 {
+          color: map.get($theme, "gray");
+        }
+      }
+      @else {
+        .theme, .theme-btn {
+          background-color: $color;
+        }
+        h3 {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+// Nav Bar Colour Themes
+
+@mixin nav-bar-theme($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      .theme {
+        color: $color;
+      }
+      .triangle {
+        border-color: $color transparent transparent transparent;
+      }
+      &:hover {
+        background-color: $color;
+      }
+      &:hover .theme {
+        color: #fff;
+      }
+      .nav-dropdown {
+        background-color: color.adjust($color, $lightness: -10%);
+      }
+    }
+  }  
+}
+
+// General Button Styling
+
+@mixin base-btn($color, $class) {
+  .btn-#{$class} {
+    background-color: $color;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: color.adjust($color, $lightness: -10%);
+    }
+    @content;
+  }
+}
+
+// Social Buttons
+
+@mixin social-button($social, $hover-color) {
+  .btn-#{$social} {
+    &:hover {
+      background-color: $hover-color;
+    }
+    @content;
+  }
+}
+
+// perhaps the better option over base-btn()
+
+@mixin better-base-btn() {
+  @each $name, $color in $theme {
+      .btn-#{$name} {
+      background-color: $color;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: color.adjust($color, $lightness: -10%);
+      }
+      @content;
+    }
+  }
+}

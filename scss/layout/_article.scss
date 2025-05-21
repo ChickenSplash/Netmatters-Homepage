@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../utilities/index" as *;
+@use "../modules/index" as *;
+
 // Layout of the whole news section
 
 .news {
@@ -90,7 +94,7 @@
 
         .text-small {
             font-size: 0.8125rem;
-            color: lighten($color-dark-text, 25%);
+            color: color.adjust($color-dark-text, $lightness: 25%);
         }
 
         hr {

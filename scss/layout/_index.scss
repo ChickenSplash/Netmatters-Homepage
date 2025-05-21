@@ -1,8 +1,8 @@
-@import "header";
-@import "nav";
-@import "banner";
-@import "our-services";
-@import "parters";
-@import "about";
-@import "article";
-@import "footer";
+@forward "header";
+@forward "nav";
+@forward "banner";
+@forward "our-services";
+@forward "parters";
+@forward "about";
+@forward "article";
+@forward "footer";
