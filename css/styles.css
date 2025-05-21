@@ -217,18 +217,7 @@
   content: "\eaca";
 }
 
-.news-article .read-more-btn, .partner-logo [class^=btn], .services-item .read-more-btn {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 5px 15px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 3px;
-  line-height: 35px;
-  text-transform: uppercase;
-}
-
-.btn-about, .btn-google, .btn-trustpilot, .btn-banner, header .btn-support, header .btn-contact, header .btn-search {
+.news-article .read-more-btn, .row [class^=btn], .partner-logo [class^=btn], .services-item .read-more-btn, .hero-text [class^=btn], header [class^=btn] {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -239,13 +228,13 @@
   border-radius: 3px;
 }
 
-header .btn-support, header .btn-contact, header .btn-search {
+header [class^=btn] {
   height: 100%;
   padding-inline: 15px;
   font-size: 1.125rem;
 }
 
-.btn-about, .btn-google, .btn-trustpilot {
+.row [class^=btn] {
   margin: 10px 10px 0px 0px;
   border-radius: 6px;
 }
@@ -330,6 +319,94 @@ h2 {
   font-weight: normal;
 }
 
+.btn-general {
+  background-color: #272936;
+  transition: background-color 0.2s ease;
+}
+.btn-general:hover {
+  background-color: rgb(17.6129032258, 18.5161290323, 24.3870967742);
+}
+
+.btn-trustpilot {
+  background-color: #00B67B;
+  transition: background-color 0.2s ease;
+}
+.btn-trustpilot:hover {
+  background-color: rgb(0, 131, 88.532967033);
+}
+
+.btn-google {
+  background-color: #4387F6;
+  transition: background-color 0.2s ease;
+}
+.btn-google:hover {
+  background-color: rgb(18.3299492386, 103.9340101523, 243.6700507614);
+}
+
+.btn-light-gray {
+  background-color: #999AA2;
+  transition: background-color 0.2s ease;
+}
+.btn-light-gray:hover {
+  background-color: rgb(126.3230769231, 127.5846153846, 137.6769230769);
+}
+
+.btn-gray {
+  background-color: #67809F;
+  transition: background-color 0.2s ease;
+}
+.btn-gray:hover {
+  background-color: rgb(81.6774193548, 102.9475806452, 129.3225806452);
+}
+
+.btn-yellow {
+  background-color: #F7B322;
+  transition: background-color 0.2s ease;
+}
+.btn-yellow:hover {
+  background-color: rgb(221.9650655022, 153.6681222707, 8.0349344978);
+}
+
+.btn-blue {
+  background-color: #4183D7;
+  transition: background-color 0.2s ease;
+}
+.btn-blue:hover {
+  background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
+}
+
+.btn-green {
+  background-color: #2ECC71;
+  transition: background-color 0.2s ease;
+}
+.btn-green:hover {
+  background-color: rgb(36.616, 162.384, 89.948);
+}
+
+.btn-red {
+  background-color: #D64541;
+  transition: background-color 0.2s ease;
+}
+.btn-red:hover {
+  background-color: rgb(187.5324675325, 44.4155844156, 40.4675324675);
+}
+
+.btn-purple {
+  background-color: #926FB1;
+  transition: background-color 0.2s ease;
+}
+.btn-purple:hover {
+  background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
+}
+
+.btn-crimson {
+  background-color: #F62459;
+  transition: background-color 0.2s ease;
+}
+.btn-crimson:hover {
+  background-color: rgb(221.8815789474, 9.1184210526, 62.8157894737);
+}
+
 .header-top {
   display: flex;
   align-items: center;
@@ -367,13 +444,11 @@ h2 {
 header {
   padding-inline: 15px;
 }
-header .btn-support {
-  background-color: #4183D7;
-  transition: background-color 0.2s ease;
+header [class^=btn] {
   display: none;
 }
-header .btn-support:hover {
-  background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
+header .btn-support {
+  display: none;
 }
 @media (min-width: 992px) {
   header .btn-support {
@@ -381,12 +456,7 @@ header .btn-support:hover {
   }
 }
 header .btn-contact {
-  background-color: #999aa2;
-  transition: background-color 0.2s ease;
   display: none;
-}
-header .btn-contact:hover {
-  background-color: rgb(126.3230769231, 127.5846153846, 137.6769230769);
 }
 @media (min-width: 992px) {
   header .btn-contact {
@@ -394,18 +464,32 @@ header .btn-contact:hover {
   }
 }
 header .btn-search {
-  background-color: #999aa2;
-  transition: background-color 0.2s ease;
   display: none;
   justify-content: center;
-}
-header .btn-search:hover {
-  background-color: rgb(126.3230769231, 127.5846153846, 137.6769230769);
+  width: 56px;
+  margin-left: auto;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 @media (min-width: 768px) {
   header .btn-search {
     display: inline-flex;
   }
+}
+@media (min-width: 992px) and (max-width: 1260px) {
+  header .btn-search {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+header .btn-general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 56px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 header .phone-link {
   font-size: 32px;
@@ -413,18 +497,6 @@ header .phone-link {
 @media (min-width: 768px) {
   header .phone-link {
     display: none;
-  }
-}
-header .square-btn {
-  width: 56px;
-  margin-left: auto;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-@media (min-width: 992px) and (max-width: 1260px) {
-  header .square-btn {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
   }
 }
 header .mobile-search-bar {
@@ -484,20 +556,6 @@ header .desktop-search-bar input:focus-visible {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
-}
-header .btn-menu {
-  background-color: #272936;
-  transition: background-color 0.2s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 56px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-header .btn-menu:hover {
-  background-color: rgb(17.6129032258, 18.5161290323, 24.3870967742);
 }
 
 nav {
@@ -741,14 +799,6 @@ nav {
   }
 }
 
-.btn-banner {
-  background-color: #926fb1;
-  transition: background-color 0.2s ease;
-}
-.btn-banner:hover {
-  background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
-}
-
 .services-item .theme-gray .theme, .services-item .theme-gray .theme-btn {
   background-color: #67809F;
 }
@@ -860,6 +910,10 @@ nav {
 .services-item p {
   font-size: 0.8125rem;
 }
+.services-item .read-more-btn {
+  font-size: 1rem;
+  padding: 10px 15px;
+}
 .services-item [class^=icon-] {
   font-size: 32px;
   color: #fff;
@@ -933,62 +987,6 @@ nav {
   overflow-x: clip;
 }
 
-.btn-gray {
-  background-color: #67809F;
-  transition: background-color 0.2s ease;
-}
-.btn-gray:hover {
-  background-color: rgb(81.6774193548, 102.9475806452, 129.3225806452);
-}
-
-.btn-yellow {
-  background-color: #F7B322;
-  transition: background-color 0.2s ease;
-}
-.btn-yellow:hover {
-  background-color: rgb(221.9650655022, 153.6681222707, 8.0349344978);
-}
-
-.btn-blue {
-  background-color: #4183D7;
-  transition: background-color 0.2s ease;
-}
-.btn-blue:hover {
-  background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
-}
-
-.btn-green {
-  background-color: #2ECC71;
-  transition: background-color 0.2s ease;
-}
-.btn-green:hover {
-  background-color: rgb(36.616, 162.384, 89.948);
-}
-
-.btn-red {
-  background-color: #D64541;
-  transition: background-color 0.2s ease;
-}
-.btn-red:hover {
-  background-color: rgb(187.5324675325, 44.4155844156, 40.4675324675);
-}
-
-.btn-purple {
-  background-color: #926FB1;
-  transition: background-color 0.2s ease;
-}
-.btn-purple:hover {
-  background-color: rgb(120.6351351351, 83.2702702703, 153.7297297297);
-}
-
-.btn-crimson {
-  background-color: #F62459;
-  transition: background-color 0.2s ease;
-}
-.btn-crimson:hover {
-  background-color: rgb(221.8815789474, 9.1184210526, 62.8157894737);
-}
-
 .partner-logo {
   display: flex;
   justify-content: center;
@@ -1008,8 +1006,8 @@ nav {
   margin-block: 15px;
 }
 .partner-logo [class^=btn] {
-  display: inline-flex;
-  align-items: center;
+  font-size: 1rem;
+  padding: 10px 15px;
 }
 .partner-logo .partner-info {
   display: none;
@@ -1114,30 +1112,6 @@ nav {
 .icon-star {
   color: orange;
   font-size: 3.125rem;
-}
-
-.btn-about {
-  background-color: #272936;
-  transition: background-color 0.2s ease;
-}
-.btn-about:hover {
-  background-color: rgb(17.6129032258, 18.5161290323, 24.3870967742);
-}
-
-.btn-google {
-  background-color: #4387f6;
-  transition: background-color 0.2s ease;
-}
-.btn-google:hover {
-  background-color: rgb(18.3299492386, 103.9340101523, 243.6700507614);
-}
-
-.btn-trustpilot {
-  background-color: #00b67b;
-  transition: background-color 0.2s ease;
-}
-.btn-trustpilot:hover {
-  background-color: rgb(0, 131, 88.532967033);
 }
 
 .news-header {
@@ -1259,6 +1233,10 @@ nav {
 }
 .news-details hr {
   margin-block: 30px;
+}
+.news-article .read-more-btn {
+  font-size: 1rem;
+  padding: 10px 15px;
 }
 .news-thumbnail {
   display: block;

@@ -9,8 +9,6 @@
     overflow-x: clip;
 }
 
-@include better-base-btn();
-
 .partner-logo {
     display: flex;
     justify-content: center;
@@ -33,9 +31,9 @@
     }
 
     [class^="btn"] {
-        @extend %read-more-btn;
-        display: inline-flex;
-        align-items: center;
+        @extend %btn-base;
+        font-size: 1rem;
+        padding: 10px 15px;
     }
     
     .partner-info {

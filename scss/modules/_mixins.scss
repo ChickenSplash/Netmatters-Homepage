@@ -94,7 +94,18 @@
   }  
 }
 
-// General Button Styling
+// Social Buttons
+
+@mixin social-button($social, $hover-color) {
+  .btn-#{$social} {
+    &:hover {
+      background-color: $hover-color;
+    }
+    @content;
+  }
+}
+
+// For all buttons outside of themed colors
 
 @mixin base-btn($color, $class) {
   .btn-#{$class} {
@@ -107,22 +118,11 @@
   }
 }
 
-// Social Buttons
+// For all buttons with the themed colors
 
-@mixin social-button($social, $hover-color) {
-  .btn-#{$social} {
-    &:hover {
-      background-color: $hover-color;
-    }
-    @content;
-  }
-}
-
-// perhaps the better option over base-btn()
-
-@mixin better-base-btn() {
-  @each $name, $color in $theme {
-      .btn-#{$name} {
+@mixin themed-base-btn() {
+  @each $name, $color in $btn-theme {
+    .btn-#{$name} {
       background-color: $color;
       transition: background-color 0.2s ease;
       &:hover {

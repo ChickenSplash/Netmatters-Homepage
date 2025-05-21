@@ -1,16 +1,5 @@
 @use "../utilities/index" as *;
 
-%read-more-btn {
-    display: inline-block;
-    font-size: 1rem;
-    padding: 5px 15px;
-    color: $color-light-text;
-    text-decoration: none;
-    border-radius: 3px;
-    line-height: 35px;
-    text-transform: uppercase;
-}
-
 %btn-base {
     text-transform: uppercase;
     display: inline-flex;
@@ -64,5 +53,3 @@
   border: 2px solid rgba(0, 0, 0, .1);
   font-size: 0.875rem;
 }
-
-// Schaltfläche

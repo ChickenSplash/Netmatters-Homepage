@@ -42,34 +42,56 @@
 header {
     padding-inline: 15px;
 
-    @include base-btn(map.get($theme, "blue"), "support") {
+    [class^="btn"] {
         display: none;
         @extend %btn-base;
         @extend %btn-header;
-
-        @media (min-width: $break-point-medium) {
-            display: inline-flex;
-        }
     }
 
-    @include base-btn(#999aa2, "contact") {
-        display: none;
-        @extend %btn-base;
-        @extend %btn-header;
+    .btn {
+        &-support {
+            display: none;
 
-        @media (min-width: $break-point-medium) {
-            display: inline-flex;
+            @media (min-width: $break-point-medium) {
+                display: inline-flex;
+            }
         }
-    }
 
-    @include base-btn(#999aa2, "search") {
-        display: none;
-        @extend %btn-base;
-        @extend %btn-header;
-        justify-content: center;
+        &-contact {
+            display: none;
 
-        @media (min-width: $break-point-small) {
+            @media (min-width: $break-point-medium) {
             display: inline-flex;
+            }
+        }
+
+        &-search {
+            display: none;
+            justify-content: center;
+
+            @media (min-width: $break-point-small) {
+                display: inline-flex;
+            }
+
+            width: 56px;
+            margin-left: auto;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+
+            @media (min-width: $break-point-medium) and (max-width: $break-point-large) {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+        }
+
+        &-general {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 56px;
+            border-radius: 3px;
+            cursor: pointer;
         }
     }
 
@@ -79,18 +101,6 @@ header {
 
         @media (min-width: $break-point-small) {
             display: none;
-        }
-    }
-
-    .square-btn {
-        width: 56px;
-        margin-left: auto;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-
-        @media (min-width: $break-point-medium) and (max-width: $break-point-large) {
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 3px;
         }
     }
 
@@ -157,19 +167,8 @@ header {
             }
         }
     }
-
-    @include base-btn($color-base-dark, "menu") {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 56px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
 }
 
 // Stuff to do:
 // Finish Hamburger menu
-// Try to have one universal button mixin
 // Update own @use namespaces

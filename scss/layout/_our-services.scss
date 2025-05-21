@@ -46,7 +46,9 @@
         }
 
         .read-more-btn {
-            @extend %read-more-btn;
+            @extend %btn-base;
+            font-size: 1rem;
+            padding: 10px 15px;
         }
 
         [class^="icon-"] {

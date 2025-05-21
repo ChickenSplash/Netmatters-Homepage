@@ -49,6 +49,10 @@
             font-size: 1.25rem;
             font-weight: bold;
         }
+
+        [class^="btn"] {
+            @extend %btn-base;
+        }
         
         @media (min-width: $break-point-medium) {
             text-align: left;
@@ -61,8 +65,4 @@
             }
         }
     }
-}
-
-@include base-btn(#926fb1, "banner") {
-    @extend %btn-base;
 }
