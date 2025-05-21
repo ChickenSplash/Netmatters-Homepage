@@ -68,15 +68,14 @@ header {
         &-search {
             display: none;
             justify-content: center;
-
-            @media (min-width: $break-point-small) {
-                display: inline-flex;
-            }
-
             width: 56px;
             margin-left: auto;
             border-top-left-radius: 0px;
             border-bottom-left-radius: 0px;
+
+            @media (min-width: $break-point-small) {
+                display: inline-flex;
+            }
 
             @media (min-width: $break-point-medium) and (max-width: $break-point-large) {
                 border-top-left-radius: 3px;

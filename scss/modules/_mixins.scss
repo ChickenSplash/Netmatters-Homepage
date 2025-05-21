@@ -105,19 +105,6 @@
   }
 }
 
-// For all buttons outside of themed colors
-
-@mixin base-btn($color, $class) {
-  .btn-#{$class} {
-    background-color: $color;
-    transition: background-color 0.2s ease;
-    &:hover {
-      background-color: color.adjust($color, $lightness: -10%);
-    }
-    @content;
-  }
-}
-
 // For all buttons with the themed colors
 
 @mixin themed-base-btn() {
