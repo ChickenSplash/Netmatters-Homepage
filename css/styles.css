@@ -254,7 +254,7 @@ header .btn-search, header .btn-contact, header .btn-support {
   background-color: #272936;
   color: #fff;
   font-size: 26px;
-  padding: 12px 22px 16px;
+  padding: 12px 22px;
   margin: 0 10px 10px 0;
 }
 
@@ -418,6 +418,14 @@ header .phone-link {
 header .square-btn {
   width: 56px;
   margin-left: auto;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+@media (min-width: 992px) and (max-width: 1260px) {
+  header .square-btn {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
 }
 header .mobile-search-bar {
   display: flex;
@@ -438,6 +446,9 @@ header .mobile-search-bar .icon-search {
 }
 header .mobile-search-bar input {
   background-color: rgba(0, 0, 0, 0.1);
+}
+header .mobile-search-bar input:focus {
+  outline: 0px;
 }
 header .desktop-search-bar {
   display: none;
@@ -465,6 +476,14 @@ header .desktop-search-bar .icon-search {
   padding: 11px;
   font-size: 20px;
   background-color: gray;
+}
+header .desktop-search-bar input {
+  border-right: none;
+}
+header .desktop-search-bar input:focus-visible {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 header .btn-menu {
   background-color: #272936;
@@ -684,18 +703,28 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(270deg, transparent 25%, #000);
+  background: linear-gradient(270deg, transparent 25%, rgba(0, 0, 0, 0.7));
+}
+@media (min-width: 992px) {
+  .hero-image:after {
+    background: linear-gradient(270deg, transparent 25%, rgb(0, 0, 0));
+  }
 }
 .hero-image > * {
   z-index: 1;
 }
+.hero-image .container {
+  display: flex;
+  align-items: center;
+}
 .hero-text {
   color: #fff;
   text-align: center;
+  padding-inline: 15px;
 }
 .hero-text h1 {
   font-size: 2.5rem;
-  margin-block: 75px 0px;
+  margin: 0px;
 }
 .hero-text p {
   font-size: 1.25rem;
@@ -711,9 +740,6 @@ nav {
   .hero-text p {
     font-size: 1.5rem;
   }
-}
-.hero-text p {
-  font-size: 1.5rem;
 }
 
 .btn-banner {
@@ -815,7 +841,7 @@ nav {
   border: #ccc solid 1px;
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.3s ease;
 }
 .services-item a:hover {
   transform: translateY(-10px);
@@ -1321,8 +1347,18 @@ footer .footer-row .footer-menu {
 footer, .footer-bottom {
   color: #fff;
 }
+
 @media (min-width: 1260px) {
-  footer .container, .footer-bottom .container {
+  footer .container {
+    display: flex;
+  }
+}
+
+.footer-bottom .container {
+  padding-block: 10px;
+}
+@media (min-width: 768px) {
+  .footer-bottom .container {
     display: flex;
   }
 }

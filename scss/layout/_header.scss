@@ -81,6 +81,13 @@ header {
     .square-btn {
         width: 56px;
         margin-left: auto;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+        @media (min-width: $break-point-medium) and (max-width: $break-point-large) {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
     }
 
     .mobile-search-bar {
@@ -103,6 +110,10 @@ header {
         input {
             @extend %header-search-box;
             background-color: rgba(0, 0, 0, .1);
+
+            &:focus {
+                outline: 0px;
+            }
         }
     }
 
@@ -133,6 +144,13 @@ header {
 
         input {
             @extend %header-search-box;
+            border-right: none;
+
+            &:focus-visible {
+                border-color: #5bc0de;
+                outline: 0;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6);
+            }
         }
     }
 
@@ -146,6 +164,13 @@ header {
         cursor: pointer;
     }
 }
+
+// Stuff to do:
+// update @import to @use and @forward
+// update darken() function to updated functions
+// Finish Hamburger menu
+// Try to have one universal button mixin
+
 
 // .menu-toggle {
 //     width: 35px;
