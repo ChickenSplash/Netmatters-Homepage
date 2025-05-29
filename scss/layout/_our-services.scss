@@ -29,7 +29,8 @@
             // To fix a minor alignment issue
             
             @media (min-width: $break-point-large) {
-                height: 328px;
+                height: 315px;
+                
                 .read-more-btn {
                     margin-top: auto;
                 }
@@ -43,6 +44,7 @@
 
         p{
             font-size: 0.8125rem;
+            margin-top: 0px;
         }
 
         .read-more-btn {

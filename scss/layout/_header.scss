@@ -83,6 +83,8 @@ header {
             }
         }
 
+        //hamburger menu button
+
         &-general {
             display: flex;
             justify-content: center;
@@ -91,6 +93,37 @@ header {
             width: 56px;
             border-radius: 3px;
             cursor: pointer;
+
+            .bars {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 28px;
+                height: 28px;
+                gap: 5px;
+
+                .bar {
+                    width: 100%;
+                    height: 3px;
+                    background: $color-light-text;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                }
+
+                // Animation for open state
+            }
+            
+            .open {
+            .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+                }
+                .bar:nth-child(2) {
+                opacity: 0;
+                }
+                .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+                }
+            }
         }
     }
 
@@ -169,5 +202,4 @@ header {
 }
 
 // Stuff to do:
-// Finish Hamburger menu
 // Update own @use namespaces

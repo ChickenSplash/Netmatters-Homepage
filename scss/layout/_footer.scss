@@ -50,6 +50,15 @@ footer {
     .company-info {
         padding-inline: 15px
     }
+
+    .footer-social-logos {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            display: inline-block;
+        }
+    }
 }
 
 .footer-bottom {
