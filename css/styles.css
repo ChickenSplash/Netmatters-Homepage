@@ -419,7 +419,7 @@ h2 {
 }
 .header-top img {
   display: block;
-  min-width: 0px;
+  width: 100%;
 }
 .header-top .search-items {
   display: flex;
@@ -1355,11 +1355,17 @@ footer .company-info {
   padding-inline: 15px;
 }
 footer .footer-social-logos {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 footer .footer-social-logos a {
-  display: inline-block;
+  display: block;
+  width: 70px;
+}
+@media (min-width: 768px) {
+  footer .footer-social-logos {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .footer-bottom {
