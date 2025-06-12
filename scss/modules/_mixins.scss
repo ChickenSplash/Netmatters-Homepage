@@ -119,3 +119,13 @@
     }
   }
 }
+
+// different banner images for each carousel child
+
+@mixin banner-images() {
+  @each $name, $image-url in $banner-images {
+    &-#{$name} {
+      background-image: url($image-url);
+    }
+  }
+}

@@ -770,16 +770,16 @@ nav {
 .hero-image {
   display: flex;
   justify-content: center;
-  height: 550px;
-  background-image: url(../img/hero-image.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  z-index: -2;
 }
 .hero-image:after {
   content: "";
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
@@ -791,12 +791,31 @@ nav {
     background: linear-gradient(270deg, transparent 25%, rgb(0, 0, 0));
   }
 }
-.hero-image > * {
-  z-index: 1;
-}
 .hero-image .container {
   display: flex;
   align-items: center;
+  height: 550px;
+}
+.hero-image.img-1 {
+  background-image: url("../img/banner/hero-image.webp");
+}
+.hero-image.img-2 {
+  background-image: url("../img/banner/home-O67Y.webp");
+}
+.hero-image.img-3 {
+  background-image: url("../img/banner/home-gay8.webp");
+}
+.hero-image.img-4 {
+  background-image: url("../img/banner/home-6yTp.webp");
+}
+.hero-image.img-5 {
+  background-image: url("../img/banner/home-J8Xx.webp");
+}
+.hero-image.img-6 {
+  background-image: url("../img/banner/home-K0pn.webp");
+}
+.hero-image.img-7 {
+  background-image: url("../img/banner/home-MSxH.webp");
 }
 .hero-text {
   color: #fff;

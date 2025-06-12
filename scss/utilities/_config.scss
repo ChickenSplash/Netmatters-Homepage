@@ -43,4 +43,14 @@ $btn-theme: (
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins&display=swap');
 
-// Icons
+// Banner Images URLs relative to the main css file (key values associate with class name found in html)
+
+$banner-images: (
+    "1": "../img/banner/hero-image.webp",
+    "2": "../img/banner/home-O67Y.webp",
+    "3": "../img/banner/home-gay8.webp",
+    "4": "../img/banner/home-6yTp.webp",
+    "5": "../img/banner/home-J8Xx.webp",
+    "6": "../img/banner/home-K0pn.webp",
+    "7": "../img/banner/home-MSxH.webp",
+)
