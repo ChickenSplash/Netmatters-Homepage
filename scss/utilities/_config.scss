@@ -43,7 +43,7 @@ $btn-theme: (
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins&display=swap');
 
-// Banner Images URLs relative to the main css file (key values associate with class name found in html)
+// Banner Images URLs relative to the main css file (key values associate with class name ("img-[key]") found in html)
 
 $banner-images: (
     "1": "../img/banner/hero-image.webp",

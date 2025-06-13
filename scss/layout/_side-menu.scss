@@ -1,0 +1,68 @@
+@use "../utilities/index" as *;
+
+.main-content {
+
+    // so the partners tooltips actually function properly AND it not produce a horizontal scrollbar
+    overflow-x: clip;
+}
+
+.side-menu {
+    color: $color-light-text;
+    position: fixed;
+    right: 0;
+    width: 275px;
+    height: 100vh;
+    overflow-y: scroll;
+    
+    // TEMP
+    background-color: $color-base;
+    z-index: 1000;
+    
+    .mobile {
+        ul {
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, .25);
+
+            a {
+                display: block;
+                text-align: center;
+                border-top: 1px solid hsla(0, 0%, 100%, .05);
+                padding: 10px;
+            }
+        }
+
+        padding: 21px;
+        
+        .side-menu-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-block: 18px;
+            color: #fff;
+            position: relative;
+            outline: 1px solid rgba(0, 0, 0, .25);
+            border: 1px solid hsla(0, 0%, 100%, .1);
+            border-radius: 3px;
+            margin-block: 20px;
+            
+            .small {
+                font-size: 0.625rem;
+                margin-bottom: -5px;
+            }
+
+            span[class^="icon-"] {
+                font-size: 23px;
+                padding-bottom: 8px;
+            }
+        }
+
+        @media (min-width: $break-point-large) {
+            display: none;
+        }
+    }
+    
+    @media (min-width: $break-point-large) {
+        width: 350px;
+    }
+}
+

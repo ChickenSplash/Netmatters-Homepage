@@ -1,6 +1,59 @@
 @use "../utilities/index" as *;
 @use "../modules/index" as *;
 
+.banner-carousel {
+    ul {
+        position: absolute;
+        bottom: 45px;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        
+        li {
+            height: 27px;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+
+            button {
+                background-color: rgba($color-light-text, 0.5);
+                width: 11px;
+                height: 11px;
+                padding: 0;
+                border: none;
+                border-radius: 50%;
+                font-size: 0;
+                margin-inline: 10px;
+                cursor: pointer;
+            }
+            
+            &:hover button {
+                background-color: #869791;
+            }
+
+            &.slick-active button {
+                background-color: $color-light-text;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                // circle appears behind it
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 19px;
+                    height: 19px;
+                    background: transparent;
+                    border: 2px solid $color-light-text;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
 .hero {
     &-image {
         display: flex;

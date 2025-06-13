@@ -2,11 +2,9 @@
 @use "../modules/index" as *;
 
 .slider-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    align-items: center;
-    overflow-x: clip;
+    .slick-list {
+        overflow: inherit;
+    }
 }
 
 .partner-logo {
@@ -78,7 +76,13 @@
 
 .img-container {
     height: 70px;
-    padding-block: 100px;
+    padding-block: 100px 50px;
     display: flex;
     align-items: center;
+}
+
+.has-tooltips {
+    .img-container {
+        padding-block: 100px;
+    }
 }

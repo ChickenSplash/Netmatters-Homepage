@@ -108,6 +108,8 @@
 
         hr {
             margin-block: 30px;
+            border-top: 1px color.adjust($color-dark-text, $lightness: 25%) solid;
+            border-bottom: 0;
         }
     }
 
