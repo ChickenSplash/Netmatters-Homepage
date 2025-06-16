@@ -873,7 +873,13 @@ nav {
 .hero-image .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 550px;
+}
+@media (min-width: 992px) {
+  .hero-image .container {
+    justify-content: start;
+  }
 }
 .hero-image.img-1 {
   background-image: url("../img/banner/hero-image.webp");

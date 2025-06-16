@@ -82,7 +82,12 @@
         .container {
             display: flex;
             align-items: center;
+            justify-content: center;
             height: 550px;
+
+            @media (min-width: $break-point-medium) {
+                justify-content: start;
+            }
         }
 
         // easy application of different images on each sibling element
