@@ -94,7 +94,6 @@ header {
             width: 56px;
             border-radius: 3px;
             cursor: pointer;
-            z-index: 3001;
 
             .bars {
                 display: flex;
@@ -144,7 +143,7 @@ header {
         justify-content: end;
         position: relative;
         height: 47px;
-        margin-block: 20px;
+        margin-top: 20px;
 
         @media (min-width: $break-point-small) {
             display: none;
@@ -203,5 +202,27 @@ header {
     }
 }
 
-// Stuff to do:
-// Update own @use namespaces
+// accompanying css to add functionality to the sticky header
+
+.sticky-header {
+    transition: top 0.3s ease;
+    position: sticky;
+    top: -168px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    z-index: 2500;
+
+    &.fixed {
+        top: 0px;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    }
+
+    @media (min-width: $break-point-small) {
+        padding-bottom: 0px;
+        top: -110px;
+    }
+
+    @media (min-width: $break-point-medium) {
+        top: -213px;
+    }
+}

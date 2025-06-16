@@ -491,7 +491,6 @@ header .btn-general {
   width: 56px;
   border-radius: 3px;
   cursor: pointer;
-  z-index: 3001;
 }
 header .btn-general .bars {
   display: flex;
@@ -531,7 +530,7 @@ header .mobile-search-bar {
   justify-content: end;
   position: relative;
   height: 47px;
-  margin-block: 20px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   header .mobile-search-bar {
@@ -582,6 +581,30 @@ header .desktop-search-bar input:focus-visible {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.sticky-header {
+  transition: top 0.3s ease;
+  position: sticky;
+  top: -168px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  z-index: 2500;
+}
+.sticky-header.fixed {
+  top: 0px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .sticky-header {
+    padding-bottom: 0px;
+    top: -110px;
+  }
+}
+@media (min-width: 992px) {
+  .sticky-header {
+    top: -213px;
+  }
 }
 
 nav {
@@ -1490,19 +1513,25 @@ footer, .footer-bottom {
   transition: transform 0.5s ease;
   overflow-x: clip;
 }
+.main-content::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 3000;
+  transition: background-color 0.5s ease;
+  pointer-events: none;
+}
 .main-content.shifted {
   transform: translateX(-275px);
   cursor: pointer;
 }
 .main-content.shifted::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  height: 100%;
-  left: 0;
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 3000;
+  pointer-events: visible;
 }
 @media (min-width: 992px) {
   .main-content.shifted {
@@ -1606,6 +1635,35 @@ footer, .footer-bottom {
   .side-menu {
     width: 350px;
   }
+}
+
+.cookies .consent-popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 4001;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.cookies .consent-popup .content {
+  background-color: #fff;
+}
+.cookies .manage {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #999AA2;
+  padding: 3px 7px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  z-index: 4000;
+}
+.cookies .manage:hover {
+  background-color: rgb(179.6769230769, 180.4153846154, 186.3230769231);
 }
 
 /*# sourceMappingURL=styles.css.map */
