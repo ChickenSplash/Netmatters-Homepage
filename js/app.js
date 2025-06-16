@@ -18,10 +18,10 @@ $(".main-content").click(() => {
 // Sticky Header
 
 const header = document.querySelector(".sticky-header");
-let lastScroll = window.scrollY || document.documentElement.scrollTop;
+let lastScroll = window.scrollY;
 
-window.addEventListener("scroll", () => { // runs this function every time user it detects scrolling, seemse quite heavy on system resources
-    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+window.addEventListener("scroll", () => { // runs this function every time it detects scrolling
+    const currentScroll = window.scrollY; // fetch the current scroll value
     
     if (currentScroll < lastScroll) { // is it scrolling up or scrolling down?
         header.classList.add("fixed")
@@ -65,3 +65,32 @@ function initiateSliders() {
 }
 
 initiateSliders();
+
+
+// Consent functionality
+
+function consentFunctionality() {
+    //declare variables and functions
+    const manageContentBtn = document.querySelector(".cookies .manage");
+    const acceptBtn = document.querySelector(".accept-btn");
+    const popup = document.querySelector(".cookies .consent-popup");
+
+    function toggleHidden() {
+        if (popup.classList.contains("is-hidden")) {
+            popup.classList.remove("is-hidden");
+        } else {
+            popup.classList.add("is-hidden");
+            localStorage.setItem("cookiesConsent", "accepted");
+        }
+    }
+
+    // use them
+    if (!localStorage.getItem("cookiesConsent")) {
+        popup.classList.remove("is-hidden");
+    }
+
+    manageContentBtn.addEventListener("click", toggleHidden)
+    acceptBtn.addEventListener("click", toggleHidden)
+}
+
+consentFunctionality();

@@ -1,5 +1,6 @@
 @use "../utilities/index" as *;
 @use "../modules/index" as *;
+@use "sass:color";
 
 footer {
     background-color: $color-base;
@@ -115,4 +116,26 @@ footer {
 }
 @include social-button("instagram", #d93175){
     @extend %btn-social;
+}
+
+.message-us {
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    background-color: $color-base;
+    padding: 17px;
+    border-radius: 50%;
+    z-index: 4000;
+    width: 65px;
+    height: 65px;
+
+    span {
+        font-size: 2rem;
+        color: $color-light-text;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.adjust($color-base, $lightness: 10%);
+    }
 }

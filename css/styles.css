@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins&display=swap");
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?1qjut1");
-  src: url("../fonts/icomoon.eot?1qjut1#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?1qjut1") format("truetype"), url("../fonts/icomoon.woff?1qjut1") format("woff"), url("../fonts/icomoon.svg?1qjut1#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?6jtmbj");
+  src: url("../fonts/icomoon.eot?6jtmbj#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6jtmbj") format("truetype"), url("../fonts/icomoon.woff?6jtmbj") format("woff"), url("../fonts/icomoon.svg?6jtmbj#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -29,24 +29,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-lock:before {
-  content: "\e908";
+.icon-arrow_right:before {
+  content: "\e911";
 }
 
-.icon-paperplane:before {
-  content: "\e903";
-}
-
-.icon-send:before {
-  content: "\e903";
-}
-
-.icon-flight:before {
-  content: "\e903";
-}
-
-.icon-email:before {
-  content: "\e903";
+.icon-message:before {
+  content: "\e90f";
 }
 
 .icon-trending-up:before {
@@ -67,6 +55,26 @@
 
 .icon-phone_in_talk:before {
   content: "\e900";
+}
+
+.icon-lock:before {
+  content: "\e908";
+}
+
+.icon-paperplane:before {
+  content: "\e903";
+}
+
+.icon-send:before {
+  content: "\e903";
+}
+
+.icon-flight:before {
+  content: "\e903";
+}
+
+.icon-email:before {
+  content: "\e903";
 }
 
 .icon-envelope:before {
@@ -217,7 +225,7 @@
   content: "\eaca";
 }
 
-.news-article .read-more-btn, .row [class^=btn], .partner-logo [class^=btn], .services-item .read-more-btn, .hero-text [class^=btn], header [class^=btn] {
+.cookies .consent-popup .content [class^=btn], .news-article .read-more-btn, .row [class^=btn], .partner-logo [class^=btn], .services-item .read-more-btn, .hero-text [class^=btn], header [class^=btn] {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -226,6 +234,7 @@
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 header [class^=btn] {
@@ -1506,6 +1515,26 @@ footer, .footer-bottom {
   background-color: #d93175;
 }
 
+.message-us {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #323544;
+  padding: 17px;
+  border-radius: 50%;
+  z-index: 4000;
+  width: 65px;
+  height: 65px;
+}
+.message-us span {
+  font-size: 2rem;
+  color: #fff;
+}
+.message-us:hover {
+  cursor: pointer;
+  background-color: rgb(71.6101694915, 75.906779661, 97.3898305085);
+}
+
 .main-content {
   position: relative;
   z-index: 2;
@@ -1638,7 +1667,7 @@ footer, .footer-bottom {
 }
 
 .cookies .consent-popup {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -1646,9 +1675,53 @@ footer, .footer-bottom {
   top: 0px;
   width: 100%;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .cookies .consent-popup .content {
   background-color: #fff;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.cookies .consent-popup .content p {
+  padding: 20px;
+  margin: 0px;
+  line-height: 30px;
+  border-block: #ccc solid 1px;
+}
+.cookies .consent-popup .content p a {
+  color: #333645;
+}
+.cookies .consent-popup .content h3 {
+  padding: 20px;
+  margin: 0px;
+  font-size: 1.625rem;
+}
+.cookies .consent-popup .content .consent-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.cookies .consent-popup .content [class^=btn] {
+  width: 100%;
+  justify-content: center;
+}
+.cookies .consent-popup .content [class^=btn]:first-child {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .cookies .consent-popup .content {
+    max-width: 598px;
+  }
+  .cookies .consent-popup .content .consent-buttons {
+    flex-direction: row;
+  }
+  .cookies .consent-popup .content [class^=btn]:first-child {
+    margin: 0px 20px 0px 0px;
+  }
+}
+.cookies .consent-popup.is-hidden {
+  display: none;
 }
 .cookies .manage {
   position: fixed;
