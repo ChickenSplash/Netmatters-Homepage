@@ -1,8 +1,25 @@
-const menuToggleContainer = document.getElementById('menu-toggle');
-const menuToggle = menuToggleContainer.querySelector('.bars');
-menuToggleContainer.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-});
+// Side menu toggle
+
+$("#menu-toggle").click((event) => {
+  if (!$(".bars").hasClass("open")) {
+    event.stopPropagation(); // so it doesnt triggler its parent's event handler
+    $(".bars").addClass("open")
+    $(".main-content").addClass("shifted")
+  } else {
+    event.stopPropagation();
+    $(".bars").removeClass("open")
+    $(".main-content").removeClass("shifted")
+  }
+})
+
+$(".main-content").click(() => {
+  if ($(".main-content").hasClass("shifted")) {
+    $(".main-content").removeClass("shifted")
+    $(".bars").removeClass("open")
+  }
+})
+
+// Functionality of sliders
 
 function initiateSliders() {
   $('.banner-carousel').slick({

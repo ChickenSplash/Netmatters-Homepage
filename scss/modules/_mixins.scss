@@ -105,6 +105,16 @@
   }
 }
 
+// Mobile side menu theme colours
+
+@mixin mobile-side-menu-button ($theme) {
+  @each $name, $color in $theme {
+    &-#{$name} {
+      color: $color;
+    }
+  }
+}
+
 // For all buttons with the themed colors
 
 @mixin themed-base-btn() {
