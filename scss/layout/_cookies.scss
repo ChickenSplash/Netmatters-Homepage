@@ -37,6 +37,7 @@
                 padding: 20px;
                 margin: 0px;
                 font-size: 1.625rem;
+                font-weight: 400;
             }
 
             .consent-buttons {
@@ -50,6 +51,7 @@
                 @extend %btn-base;
                 width: 100%;
                 justify-content: center;
+                font-size: 1.125rem;
 
                 &:first-child {
                     margin-bottom: 20px;

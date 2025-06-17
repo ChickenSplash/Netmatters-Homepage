@@ -1702,6 +1702,7 @@ footer, .footer-bottom {
   padding: 20px;
   margin: 0px;
   font-size: 1.625rem;
+  font-weight: 400;
 }
 .cookies .consent-popup .content .consent-buttons {
   display: flex;
@@ -1711,6 +1712,7 @@ footer, .footer-bottom {
 .cookies .consent-popup .content [class^=btn] {
   width: 100%;
   justify-content: center;
+  font-size: 1.125rem;
 }
 .cookies .consent-popup .content [class^=btn]:first-child {
   margin-bottom: 20px;
