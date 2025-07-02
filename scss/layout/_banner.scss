@@ -64,6 +64,14 @@
         position: relative;
         z-index: -2;
 
+        &.img-1.slick-current .container{
+            height: 675px;
+
+            @media (min-width: $break-point-small) {
+                height: 550px;
+            }
+        }
+
         &:after {
             content: "";
             position: absolute;
@@ -84,18 +92,19 @@
             align-items: center;
             justify-content: center;
             height: 550px;
+            transition: height 0.3s ease;
 
             @media (min-width: $break-point-medium) {
                 justify-content: start;
             }
         }
-
         // easy application of different images on each sibling element
 
         &.img {
             @include banner-images();
         }
     }
+
 
     &-text {
         color: $color-light-text;

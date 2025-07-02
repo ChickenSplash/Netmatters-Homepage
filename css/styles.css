@@ -855,6 +855,14 @@ nav {
   position: relative;
   z-index: -2;
 }
+.hero-image.img-1.slick-current .container {
+  height: 675px;
+}
+@media (min-width: 768px) {
+  .hero-image.img-1.slick-current .container {
+    height: 550px;
+  }
+}
 .hero-image:after {
   content: "";
   position: absolute;
@@ -875,6 +883,7 @@ nav {
   align-items: center;
   justify-content: center;
   height: 550px;
+  transition: height 0.3s ease;
 }
 @media (min-width: 992px) {
   .hero-image .container {
