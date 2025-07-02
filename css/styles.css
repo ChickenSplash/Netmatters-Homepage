@@ -855,14 +855,6 @@ nav {
   position: relative;
   z-index: -2;
 }
-.hero-image.img-1.slick-current .container {
-  height: 675px;
-}
-@media (min-width: 768px) {
-  .hero-image.img-1.slick-current .container {
-    height: 550px;
-  }
-}
 .hero-image:after {
   content: "";
   position: absolute;
@@ -876,6 +868,11 @@ nav {
 @media (min-width: 992px) {
   .hero-image:after {
     background: linear-gradient(270deg, transparent 25%, rgb(0, 0, 0));
+  }
+}
+@media (max-width: 768px) {
+  .hero-image.img-1.slick-current .container {
+    height: 675px;
   }
 }
 .hero-image .container {

@@ -64,14 +64,6 @@
         position: relative;
         z-index: -2;
 
-        &.img-1.slick-current .container{
-            height: 675px;
-
-            @media (min-width: $break-point-small) {
-                height: 550px;
-            }
-        }
-
         &:after {
             content: "";
             position: absolute;
@@ -84,6 +76,12 @@
 
             @media (min-width: $break-point-medium) {
                 background: linear-gradient(270deg,transparent 25%, rgba(0, 0, 0, 1));
+            }
+        }
+
+        &.img-1.slick-current .container{
+            @media (max-width: $break-point-small) {
+                height: 675px;
             }
         }
 
