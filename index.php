@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="js/slick/slick.css">
 </head>
+<?php require "envloader.php"; ?>
 <body>
     <div class="side-menu">
         <div class="mobile">
