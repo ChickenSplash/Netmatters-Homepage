@@ -94,3 +94,54 @@ function consentFunctionality() {
 }
 
 consentFunctionality();
+
+// dropdown for contact us page
+
+$(".dropdown-box").hide();
+
+$("#dropdown-link").click(() => {
+    $(".dropdown-box").is(':visible') // is content visible?
+        ? $(".dropdown-box").slideUp(350)
+        : $(".dropdown-box").slideDown(350);
+});
+
+// client side form validation
+
+function validateForm() {
+    let valid = true;
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+
+    // Clear previous errors
+    const error = document.querySelectorAll('.error')
+    for (i = 0; i < error.length; i++) {
+      error[i].classList.remove("error");
+    }
+
+    if (name.value.trim() === '') {
+        name.classList.add("error");
+        valid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+        email.classList.add("error");
+        valid = false;
+    }
+
+    if (phone.value.trim() === '') {
+        phone.classList.add("error");
+        valid = false;
+    }
+
+    if (message.value.trim() === '') {
+        message.classList.add("error");
+        valid = false;
+    }
+
+    return valid;
+}
+

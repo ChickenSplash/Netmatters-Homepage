@@ -70,3 +70,171 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.contact {
+    padding: 15px 15px 50px;
+
+    .info {
+        p, a {
+            margin: 0px 0px 25px 0px;
+        }
+
+        .important {
+            font-weight: bold;
+        }
+
+        .light {
+            color: color.adjust($color-dark-text, $lightness: 25%);
+        }
+
+        a {
+            display: block;
+            font-size: 1.625rem;
+            font-weight: bold;
+            color: map.get($theme, "purple");
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        #dropdown-link:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    form {
+        padding: 30px;
+        background-color: #e6e7e9;
+        border-radius: 10px;
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            input, textarea{
+                border: 2px solid rgba(0, 0, 0, .1);
+                padding: 5px 15px;
+                font: inherit;
+                color: inherit;
+
+                &:focus-visible {
+                    border-color: #5bc0de;
+                    outline: 0;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6);
+                }
+            }
+
+            input {
+                height: 47px;
+            }
+
+            textarea {
+                height: 100px;
+                resize: none;
+            }
+
+        }
+
+        .checkbox {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+            
+            input {
+                width: 32px;
+                height:32px;
+            }
+
+            label {
+                display: block;
+                line-height: 32px;
+
+                a {
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: color.adjust($color-dark-text, $lightness: -10%);
+                    }
+                }
+            }
+        }
+
+        .action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            [class^="btn"] {
+                @extend %btn-base;
+                font-size: 1.125rem;
+                border: none;
+            }
+
+            p {
+                display: inline-block;
+                text-align: right;
+                margin: 0;
+                font-size: 0.875rem;
+            }
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .grid-container {
+            @media (min-width: $break-point-medium) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 30px;
+            }
+        }
+
+        .error {
+            border: 1px solid #d24d57 !important;
+        }
+    }
+
+    .required::after {
+        content:"*";
+        color: #d24d57;
+    }
+
+    @media (min-width: $break-point-large) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 30px;
+
+        form {
+            flex: 2;
+        }
+
+        .info {
+            flex: 1;
+        }
+    }
+}
+
+.current-page {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    padding-block: 13px;
+    font-size: 0.875rem;
+
+    p {
+        margin: 0px;
+        padding-inline: 15px;
+
+        a {
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
