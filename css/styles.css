@@ -225,7 +225,7 @@
   content: "\eaca";
 }
 
-.cookies .consent-popup .content [class^=btn], .news-article .read-more-btn, .row [class^=btn], .partner-logo [class^=btn], .services-item .read-more-btn, .hero-text [class^=btn], header [class^=btn] {
+.location-cards .card .content [class^=btn], .cookies .consent-popup .content [class^=btn], .news-article .read-more-btn, .row [class^=btn], .partner-logo [class^=btn], .services-item .read-more-btn, .hero-text [class^=btn], header [class^=btn] {
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -1751,6 +1751,63 @@ footer, .footer-bottom {
 }
 .cookies .manage:hover {
   background-color: rgb(179.6769230769, 180.4153846154, 186.3230769231);
+}
+
+.offices-header {
+  font-weight: 400;
+  margin-block: 50px;
+  padding-inline: 15px;
+}
+
+.location-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding-inline: 15px;
+}
+.location-cards .card {
+  margin-block: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+.location-cards .card img {
+  max-width: 100%;
+  display: block;
+}
+.location-cards .card .content {
+  padding: 30px;
+}
+.location-cards .card .content a.header {
+  font-size: 1.25rem;
+}
+.location-cards .card .content a.header:hover {
+  text-decoration: underline;
+}
+.location-cards .card .content a.phone {
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: #926FB1;
+  display: block;
+}
+.location-cards .card .content a.phone:hover {
+  text-decoration: underline;
+}
+.location-cards .card .content p {
+  color: rgb(105.1875, 111.375, 142.3125);
+  font-size: 0.825rem;
+}
+.location-cards .card .content [class^=btn] {
+  font-size: 0.925rem;
+  margin-top: 20px;
+}
+@media (min-width: 992px) {
+  .location-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

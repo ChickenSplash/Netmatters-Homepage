@@ -1,0 +1,72 @@
+@use "sass:color";
+@use "sass:map";
+@use "../utilities/index" as *;
+@use "../modules/index" as *;
+
+.offices-header {
+    font-weight: 400;
+    margin-block: 50px;
+    padding-inline: 15px;
+}
+
+.location-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding-inline: 15px;
+    
+    .card {
+        margin-block: 30px;
+        border: 1px solid #ccc;
+        box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        .content {
+            padding: 30px;
+            
+            a {
+                &.header {
+                    font-size: 1.25rem;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+    
+                &.phone {
+                    font-size: 1.625rem;
+                    font-weight: bold;
+                    color: map.get($theme, "purple");
+                    display: block;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+            p {
+                color: color.adjust($color-dark-text, $lightness: 25%);
+                font-size: 0.825rem;
+            }
+
+            [class^="btn"] {
+                @extend %btn-base;
+                font-size: 0.925rem;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @media (min-width: $break-point-medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
