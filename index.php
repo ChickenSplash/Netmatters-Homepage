@@ -235,69 +235,29 @@
                     <a href="#">View All&nbsp;<span class="icon-arrow-right2"></span></a>
                 </div>
                 <div class="news-flex-container">
-                    <div class="news-spacing"> 
-                        <a class="news-article theme-yellow" href="#">
-                            <span class="news-link theme">News</span>
-                            <div class="aspect-container">
-                                <img src="img/news-articles/april-notables-2025.webp" alt="April Notables 2025" class="news-thumbnail">
-                            </div>
-                            <div class="news-details">
-                                <h3>April Notables 2025 - Celebrating Our Team</h3>
-                                <p class="text-small">April Notables 2025 At Netmatters, we’re passionate about celebrating the people who make our succes...</p>
-                                <div class="read-more-btn theme-btn">Read More</div>
-                                <hr>
-                                <div class="posted-by">
-                                    <img src="img/logo/netmatters-logo-small.webp" alt="Netmatters Logo" class="posted-by--logo-img">
-                                    <div class="news-author">
-                                        <p><strong>Posted by Netmatters</strong></p>
-                                        <p class="text-small">7th May 2025</p>
+                    <?php foreach($articles as $article): ?>   
+                        <div class="news-spacing">
+                            <a class="news-article theme-<?= $article["color"] ?>" href="#">
+                                <span class="news-link theme"><?= $article["type"] ?></span>
+                                <div class="aspect-container">
+                                    <img src="img/news-articles/<?= $article["image_url"] ?>" alt="News Thumbnail" class="news-thumbnail">
+                                </div>
+                                <div class="news-details">
+                                    <h3><?= truncate($article["title"], 50) ?></h3>
+                                    <p class="text-small"><?= truncate($article["description"], 100) ?></p>
+                                    <div class="read-more-btn theme-btn">Read More</div>
+                                    <hr>
+                                    <div class="posted-by">
+                                        <img src="img/logo/<?= $article["author_picture"] ?>" alt="Profile Picture" class="posted-by--logo-img">
+                                        <div class="news-author">
+                                            <p><strong>Posted by <?= $article["author_name"] ?></strong></p>
+                                            <p class="text-small"><?= new DateTime($article["posted_at"])->format("jS F Y") ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="news-spacing">
-                        <a class="news-article theme-red" href="#">
-                            <span class="news-link theme">News</span>
-                            <div class="aspect-container">
-                                <img src="img/news-articles/netmatters-achieves-kings-award.webp" alt="Netmatters Kings Award" class="news-thumbnail">
-                            </div>
-                            <div class="news-details">
-                                <h3>Netmatters Achieves King’s Award for Enterpr...</h3>
-                                <p class="text-small">Netmatters is honoured to have been presented with a King's Award for Enterprise for Propoting Oppor...</p>
-                                <div class="read-more-btn theme-btn">Read More</div>
-                                <hr>
-                                <div class="posted-by">
-                                    <img src="img/logo/netmatters-logo-small.webp" alt="Netmatters Logo" class="posted-by--logo-img">
-                                    <div class="news-author">
-                                        <p><strong>Posted by Netmatters</strong></p>
-                                        <p class="text-small">29th April 2025</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="news-spacing news-spacing-hide">
-                        <a class="news-article theme-blue" href="#">
-                            <span class="news-link theme">Case Study</span>
-                            <div class="aspect-container">
-                                <img src="img/news-articles/case-study-enhancing-security.png" alt="Greg Rowe Ltd" class="news-thumbnail">
-                            </div>
-                            <div class="news-details">
-                                <h3>Case Study: Enhancing Security and Reducing C...</h3>
-                                <p class="text-small">Who is The Client? Greg Rowe Limited is a leading UK-based tap design and manufacturing company that...</p>
-                                <div class="read-more-btn theme-btn">Read More</div>
-                                <hr>
-                                <div class="posted-by">
-                                    <img src="img/logo/netmatters-logo-small.webp" alt="Netmatters Logo" class="posted-by--logo-img">
-                                    <div class="news-author">
-                                        <p><strong>Posted by Netmatters</strong></p>
-                                        <p class="text-small">25th April 2025</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="news-footer">
                     <a href="#">View All&nbsp;<span class="icon-arrow-right2"></span></a>
