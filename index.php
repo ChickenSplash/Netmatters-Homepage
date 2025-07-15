@@ -1,8 +1,10 @@
 <?php require __DIR__ . "/envloader.php"; ?>
+<?php require __DIR__ . "/database-connect.php"; ?>
 <?php require __DIR__ . "/includes/layout/head.php"; ?>
 <body>
     <?php require __DIR__ . "/includes/layout/side-menu.php"; ?>
-    <?php require __DIR__ . "/includes/layout/header.php"; ?>
+    <div class="main-content">
+        <?php require __DIR__ . "/includes/layout/header.php"; ?>
         <div class="banner-carousel">
             <div class="hero-image img-1">
                 <div class="container">
@@ -233,7 +235,7 @@
                     <a href="#">View All&nbsp;<span class="icon-arrow-right2"></span></a>
                 </div>
                 <div class="news-flex-container">
-                    <div class="news-spacing">
+                    <div class="news-spacing"> 
                         <a class="news-article theme-yellow" href="#">
                             <span class="news-link theme">News</span>
                             <div class="aspect-container">
@@ -465,6 +467,7 @@
             </div>
         </div>
         <?php require __DIR__ . "/includes/layout/footer.php"; ?>
+    </div>
     <?php require __DIR__ . "/includes/layout/cookies.php"; ?>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/slick/slick.min.js"></script>

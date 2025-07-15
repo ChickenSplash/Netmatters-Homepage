@@ -2,7 +2,8 @@
 <?php require __DIR__ . "/includes/layout/head.php"; ?>
 <body>
     <?php require __DIR__ . "/includes/layout/side-menu.php"; ?>
-    <?php require __DIR__ . "/includes/layout/header.php"; ?>
+    <div class="main-content">
+        <?php require __DIR__ . "/includes/layout/header.php"; ?>
         <div class="current-page">
             <div class="container">
                 <p><a href="/">Home</a> / Our Offices</p>
@@ -110,6 +111,7 @@
             </div>
         </div>
         <?php require __DIR__ . "/includes/layout/footer.php"; ?>
+    </div>
     <?php require __DIR__ . "/includes/layout/cookies.php"; ?>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
