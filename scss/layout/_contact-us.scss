@@ -109,6 +109,31 @@
         background-color: #e6e7e9;
         border-radius: 10px;
 
+        .form-feedback {
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            color: $color-light-text;
+            
+            p {
+                margin: 0px;
+            }
+
+            .close {
+                cursor: pointer;
+            }
+
+            &.success {
+                background-color: map.get($theme, "green");
+            }
+
+            &.fail {
+                background-color: map.get($theme, "red");
+            }
+        }
+
         .input {
             display: flex;
             flex-direction: column;

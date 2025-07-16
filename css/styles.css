@@ -1840,6 +1840,26 @@ footer, .footer-bottom {
   background-color: #e6e7e9;
   border-radius: 10px;
 }
+.contact form .form-feedback {
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.contact form .form-feedback p {
+  margin: 0px;
+}
+.contact form .form-feedback .close {
+  cursor: pointer;
+}
+.contact form .form-feedback.success {
+  background-color: #2ECC71;
+}
+.contact form .form-feedback.fail {
+  background-color: #D64541;
+}
 .contact form .input {
   display: flex;
   flex-direction: column;

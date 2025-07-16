@@ -1,5 +1,8 @@
-<?php require __DIR__ . "/envloader.php"; ?>
-<?php require __DIR__ . "/database-connect.php"; ?>
+<?php 
+require __DIR__ . "/envloader.php";
+require __DIR__ . "/includes/fetch-articles.php";
+require __DIR__ . "/includes/functions.php";
+?>
 <?php require __DIR__ . "/includes/layout/head.php"; ?>
 <body>
     <?php require __DIR__ . "/includes/layout/side-menu.php"; ?>
@@ -251,7 +254,7 @@
                                         <img src="img/logo/<?= $article["author_picture"] ?>" alt="Profile Picture" class="posted-by--logo-img">
                                         <div class="news-author">
                                             <p><strong>Posted by <?= $article["author_name"] ?></strong></p>
-                                            <p class="text-small"><?= new DateTime($article["posted_at"])->format("jS F Y") ?></p>
+                                            <p class="text-small"><?php $date = new DateTime($article["posted_at"]); echo $date->format("jS F Y"); ?></p>
                                         </div>
                                     </div>
                                 </div>

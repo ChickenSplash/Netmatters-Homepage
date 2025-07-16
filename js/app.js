@@ -105,6 +105,8 @@ $("#dropdown-link").click(() => {
         : $(".dropdown-box").slideDown(350);
 });
 
+// event listeners to be able to close server side form validation
+
 // client side form validation
 
 function validateForm() {

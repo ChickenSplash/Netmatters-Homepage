@@ -1,4 +1,24 @@
-<?php require __DIR__ . "/envloader.php"; ?>
+<?php 
+session_start();
+require __DIR__ . "/envloader.php";
+require __DIR__ . "/includes/functions.php";
+
+$status = $_SESSION["form_status"] ?? [];
+$color = $_SESSION["form_color"] ?? '';
+
+unset($_SESSION["form_status"], $_SESSION["form_color"]);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require __DIR__ . "/includes/add-user-contact.php";
+
+    $_SESSION["form_status"] = $status;
+    $_SESSION["form_color"] = $color;
+    
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit(); 
+}
+
+?>
 <?php require __DIR__ . "/includes/layout/head.php"; ?>
 <body>
     <?php require __DIR__ . "/includes/layout/side-menu.php"; ?>
@@ -74,32 +94,37 @@
                         <p class="light">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
                     </div>
                 </div>
-                <form onsubmit="return validateForm()">
+                <form method="POST" onsubmit="return validateForm()">
+                    <?php foreach ($status as $message): ?>
+                        <div class="form-feedback <?= $color ?>">
+                            <p><?= $message ?></p><p class="close">X</p>
+                        </div>
+                    <?php endforeach; ?>
                     <div class="grid-container">
                         <div class="input">
                             <label for="name" class="required">Your Name</label>
-                            <input id="name">
+                            <input name="name" id="name">
                         </div>
                         <div class="input">
                             <label for="company">Company Name</label>
-                            <input id="company">
+                            <input name="company_name" id="company">
                         </div>
                         <div class="input">
                             <label for="email" class="required">Your Email</label>
-                            <input id="email">
+                            <input name="email" id="email">
                         </div>
                         <div class="input">
                             <label for="phone" class="required">Your Telephone Number</label>
-                            <input id="phone">
+                            <input name="phone" id="phone">
                         </div>
                     </div>
                     <div class="input">
                         <label for="message" class="required">Message</label>
-                        <textarea id="message"></textarea>
+                        <textarea name="message" id="message"></textarea>
                     </div>
                     <div class="checkbox">
                         <div class="box">
-                            <input type="checkbox" id="marketing-info">
+                            <input name="marketing_consent" type="checkbox" id="marketing-info">
                         </div>
                         <label for="marketing-info">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>              
                     </div>
