@@ -111,7 +111,6 @@
 
         .form-feedback {
             margin-bottom: 15px;
-            padding: 20px;
             border-radius: 10px;
             display: flex;
             justify-content: space-between;
@@ -119,6 +118,7 @@
             
             p {
                 margin: 0px;
+                padding: 20px;
             }
 
             .close {

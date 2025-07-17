@@ -34,6 +34,18 @@ CREATE TABLE `type` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+DROP TABLE IF EXISTS `user_contact`;
+CREATE TABLE `user_contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `marketing_consent` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -53,6 +65,8 @@ INSERT INTO `news_articles` (`id`, `title`, `description`, `posted_at`, `image_u
 INSERT INTO `type` (`id`, `type`) VALUES
 (1, 'News'),
 (2, 'Case Study');
+INSERT INTO `user_contact` (`id`, `name`, `company_name`, `email`, `phone`, `message`, `marketing_consent`) VALUES
+(88, 'Steven', '', 'test@test.test', '07123456789', 'Hello, I like cookies.', 1);
 INSERT INTO `users` (`id`, `name`, `picture_url`) VALUES
 (1, 'Netmatters', 'netmatters-logo-small.webp');
 

@@ -1,10 +1,10 @@
 <?php
 
 // Database connection details
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "netmatters-website";
+$host = $_ENV["DB_HOST"];
+$username = $_ENV["DB_USER"];
+$password = $_ENV["DB_PASSWORD"];
+$database = $_ENV["DB_NAME"];
 $charset = "utf8mb4";
 
 $dsn = "mysql:host=$host;dbname=$database;charset=$charset";

@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a href="#">01603 515007</a>
                     <p class="important">Business hours:</p>
                     <p class="important">Monday - Friday 07:00 - 18:00</p>
-                    <p class="important" id="dropdown-link">Out of Hours IT Support</p>
+                    <p class="important" id="dropdown-link">Out of Hours IT Support 🡣</p>
                     <div class="dropdown-box">
                         <p class="light">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                         <p class="important">Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00<br>

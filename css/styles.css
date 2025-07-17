@@ -1842,7 +1842,6 @@ footer, .footer-bottom {
 }
 .contact form .form-feedback {
   margin-bottom: 15px;
-  padding: 20px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -1850,6 +1849,7 @@ footer, .footer-bottom {
 }
 .contact form .form-feedback p {
   margin: 0px;
+  padding: 20px;
 }
 .contact form .form-feedback .close {
   cursor: pointer;
