@@ -56,7 +56,7 @@
             flex: 1;
         }
 
-        &-hide {
+        &.hide {
             @media (min-width: $break-point-small) and (max-width: $break-point-large) {
                 display: none;
             }

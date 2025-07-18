@@ -2,6 +2,10 @@
 
 require __DIR__ . '/database-config.php';
 
+foreach ($_POST as $key => $value) {
+    $_POST[$key] = trim($value);
+}
+
 $status = [];
 
 if (!$_POST["name"]) {

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?6jtmbj');
-  src:  url('../fonts/icomoon.eot?6jtmbj#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?6jtmbj') format('truetype'),
-    url('../fonts/icomoon.woff?6jtmbj') format('woff'),
-    url('../fonts/icomoon.svg?6jtmbj#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?taq3u2');
+  src:  url('../fonts/icomoon.eot?taq3u2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?taq3u2') format('truetype'),
+    url('../fonts/icomoon.woff?taq3u2') format('woff'),
+    url('../fonts/icomoon.svg?taq3u2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,6 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -34,6 +35,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-keyboard_arrow_up:before {
+  content: "\e912";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e913";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e914";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e915";
+}
 .icon-arrow_right:before {
   content: "\e911";
 }

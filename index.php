@@ -238,8 +238,8 @@ require __DIR__ . "/includes/functions.php";
                     <a href="#">View All&nbsp;<span class="icon-arrow-right2"></span></a>
                 </div>
                 <div class="news-flex-container">
-                    <?php foreach($articles as $article): ?>   
-                        <div class="news-spacing">
+                    <?php $i = 0; foreach($articles as $article): $i++; ?>   
+                        <div class="news-spacing <?php if ($i === 3) {echo "hide";} ?>">
                             <a class="news-article theme-<?= $article["color"] ?>" href="#">
                                 <span class="news-link theme"><?= $article["type"] ?></span>
                                 <div class="aspect-container">
