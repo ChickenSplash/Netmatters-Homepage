@@ -2,7 +2,7 @@
     <div class="mobile">
         <ul>
             <li class="category top-item">
-                <a class="side-menu-button" href="#">Contact Us</a>
+                <a class="side-menu-button" href="contact">Contact Us</a>
             </li>
             <li class="category">
                 <a class="side-menu-button" href="#">
