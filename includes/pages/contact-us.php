@@ -82,24 +82,24 @@
                     <div class="grid-container">
                         <div class="input">
                             <label for="name" class="required">Your Name</label>
-                            <input name="name" id="name">
+                            <input name="name" id="name" value="<?php if ($old_input) {echo $old_input["name"];} ?>">
                         </div>
                         <div class="input">
                             <label for="company">Company Name</label>
-                            <input name="company_name" id="company">
+                            <input name="company_name" id="company" value="<?php if ($old_input) {echo $old_input["company_name"];} ?>">
                         </div>
                         <div class="input">
                             <label for="email" class="required">Your Email</label>
-                            <input name="email" id="email">
+                            <input name="email" id="email" value="<?php if ($old_input) {echo $old_input["email"];} ?>">
                         </div>
                         <div class="input">
                             <label for="phone" class="required">Your Telephone Number</label>
-                            <input name="phone" id="phone">
+                            <input name="phone" id="phone" value="<?php if ($old_input) {echo $old_input["phone"];} ?>">
                         </div>
                     </div>
                     <div class="input">
                         <label for="message" class="required">Message</label>
-                        <textarea name="message" id="message"></textarea>
+                        <textarea name="message" id="message"><?php if ($old_input) {echo $old_input["message"];} ?></textarea>
                     </div>
                     <div class="checkbox">
                         <div class="box">

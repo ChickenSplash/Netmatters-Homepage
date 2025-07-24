@@ -49,4 +49,8 @@ if (!$status) { // to apply the class and feedback depending on condition
     }
 } else {
     $color = "fail";
+    $_SESSION["old_input"] = $_POST;
 }
+
+$_SESSION["form_status"] = $status;
+$_SESSION["form_color"] = $color;

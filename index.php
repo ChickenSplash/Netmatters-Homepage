@@ -24,9 +24,6 @@ if ($_SERVER["REQUEST_URI"] === "/") {
 if ($_SERVER["REQUEST_URI"] === "/contact") {
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require BASE_PATH . "includes/add-user-contact.php";
-
-        $_SESSION["form_status"] = $status;
-        $_SESSION["form_color"] = $color;
         
         header("Location: /contact");
         exit(); 
@@ -34,7 +31,8 @@ if ($_SERVER["REQUEST_URI"] === "/contact") {
 
     $status = $_SESSION["form_status"] ?? [];
     $color = $_SESSION["form_color"] ?? '';
-    unset($_SESSION["form_status"], $_SESSION["form_color"]);
+    $old_input = $_SESSION["old_input"] ?? [];
+    unset($_SESSION["form_status"], $_SESSION["form_color"], $_SESSION["old_input"]);
     
     require BASE_PATH . "includes/pages/contact-us.php";
 }
