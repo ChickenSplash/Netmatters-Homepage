@@ -1,29 +1,8 @@
-<?php 
-session_start();
-require __DIR__ . "/envloader.php";
-require __DIR__ . "/includes/functions.php";
-
-$status = $_SESSION["form_status"] ?? [];
-$color = $_SESSION["form_color"] ?? '';
-
-unset($_SESSION["form_status"], $_SESSION["form_color"]);
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require __DIR__ . "/includes/add-user-contact.php";
-
-    $_SESSION["form_status"] = $status;
-    $_SESSION["form_color"] = $color;
-    
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit(); 
-}
-
-?>
-<?php require __DIR__ . "/includes/layout/head.php"; ?>
+<?php require BASE_PATH . "includes/layout/head.php"; ?>
 <body>
-    <?php require __DIR__ . "/includes/layout/side-menu.php"; ?>
+    <?php require BASE_PATH . "includes/layout/side-menu.php"; ?>
     <div class="main-content">
-        <?php require __DIR__ . "/includes/layout/header.php"; ?>
+        <?php require BASE_PATH . "includes/layout/header.php"; ?>
         <div class="current-page">
             <div class="container">
                 <p><a href="/">Home</a> / Our Offices</p>
@@ -135,9 +114,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </form>
             </div>
         </div>
-        <?php require __DIR__ . "/includes/layout/footer.php"; ?>
+        <?php require BASE_PATH . "includes/layout/footer.php"; ?>
     </div>
-    <?php require __DIR__ . "/includes/layout/cookies.php"; ?>
+    <?php require BASE_PATH . "includes/layout/cookies.php"; ?>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
     <script src="js/app.js"></script>

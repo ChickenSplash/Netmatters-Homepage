@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/database-config.php';
+require BASE_PATH . 'includes/database-config.php';
 
 try {
     $pdo = new PDO($dsn, $username, $password, $options);

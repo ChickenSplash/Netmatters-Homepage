@@ -1,9 +1,9 @@
 <?php
 
-require __DIR__ . '/database-config.php';
+require BASE_PATH . 'includes/database-config.php';
 
 foreach ($_POST as $key => $value) {
-    $_POST[$key] = trim($value);
+    $_POST[$key] = trim(strip_tags($value));
 }
 
 $status = [];

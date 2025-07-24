@@ -4,7 +4,7 @@
             <a href="/"><img src="img/logo/netmatters-logo.webp" alt="Netmatters Logo"></a>
             <div class="search-items">
                 <a href="#" class="btn-blue btn-support"><span class="icon-mouse"></span>&nbsp;Support</a>
-                <a href="contact-us.php" class="btn-light-gray btn-contact"><span class="icon-paperplane"></span>&nbsp;Contact</a>
+                <a href="contact" class="btn-light-gray btn-contact"><span class="icon-paperplane"></span>&nbsp;Contact</a>
                 <span class="icon-phone_in_talk phone-link"></span>
                 <div class="search-section">
                     <div class="desktop-search-bar">
