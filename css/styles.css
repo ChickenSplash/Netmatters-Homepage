@@ -1925,8 +1925,9 @@ footer, .footer-bottom {
   align-items: center;
 }
 .contact form .action [class^=btn] {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   border: none;
+  padding: 15px;
 }
 .contact form .action p {
   display: inline-block;
@@ -1936,6 +1937,7 @@ footer, .footer-bottom {
 }
 .contact form label {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 @media (min-width: 992px) {
   .contact form .grid-container {

@@ -17,11 +17,15 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 if ($_SERVER["REQUEST_URI"] === "/") {
+    $tabHeading = "Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters";
+
     require BASE_PATH . "includes/fetch-articles.php";
     require BASE_PATH . "includes/pages/index.php";
 }
 
 if ($_SERVER["REQUEST_URI"] === "/contact") {
+    $tabHeading = "Contact Us | Netmatters";
+
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require BASE_PATH . "includes/add-user-contact.php";
         
